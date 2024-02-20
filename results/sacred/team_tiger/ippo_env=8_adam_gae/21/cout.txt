@@ -1,0 +1,92 @@
+[INFO 23:36:25] pymarl Running command 'my_main'
+[INFO 23:36:25] pymarl Started run with ID "21"
+[DEBUG 23:36:25] my_main Started
+[INFO 23:36:25] my_main Experiment Parameters:
+[INFO 23:36:25] my_main 
+
+{   'accumulated_episodes': 8,
+    'action_selector': 'multinomial',
+    'agent': 'n_rnn',
+    'agent_output_type': 'pi_logits',
+    'batch_size': 64,
+    'batch_size_run': 8,
+    'buffer_cpu_only': True,
+    'buffer_size': 64,
+    'checkpoint_path': '',
+    'critic_coef': 0.5,
+    'critic_lr': 0.0005,
+    'entropy': 0.01,
+    'env': 'team_tiger',
+    'env_args': {   'env_args': None,
+                    'map_name': 'team_tiger',
+                    'seed': 146359665},
+    'eps_clip': 0.2,
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.0,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'gae_lambda': 0.95,
+    'gain': 0.01,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'label': 'default_label',
+    'learner': 'ppo_learner',
+    'learner_log_interval': 2000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.0005,
+    'mac': 'basic_mac',
+    'mask_before_softmax': True,
+    'mini_epochs': 8,
+    'name': 'ippo_env=8_adam_gae',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'run': 'default',
+    'runner': 'parallel',
+    'runner_log_interval': 2000,
+    'save_model': False,
+    'save_model_interval': 2000000,
+    'save_probs': True,
+    'save_replay': False,
+    'seed': 146359665,
+    't_max': 10050000,
+    'test_greedy': True,
+    'test_interval': 2000,
+    'test_nepisode': 96,
+    'use_cuda': False,
+    'use_layer_norm': True,
+    'use_orthogonal': True,
+    'use_tensorboard': False,
+    'use_value_norm': True}
+
+[INFO 23:36:25] my_main Beginning training for 10050000 timesteps
+/home/elem/repos/MARL/pymarl/src/components/episode_buffer.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 23:36:26] my_main t_env: 11 / 10050000
+[INFO 23:36:26] my_main Estimated time left: 56 seconds. Time passed: 0 seconds
+[INFO 23:36:46] my_main Recent Stats | t_env:       2003 | Episode:     1520
+actor_loss:                0.5684	advantage_mean:           -0.6706	critic_loss:               1.3081	entropy_loss:              2.7583
+ep_length_mean:            1.3750	epsilon:                   1.0000	grad_norm:                 2.1209	lr:                        0.0005
+return_mean:             -11.5000	return_std:               26.3154	target_mean:              -0.6719	test_ep_length_mean:       3.5729
+test_return_mean:        -54.2083	test_return_std:          44.3046	
+[INFO 23:36:46] my_main t_env: 2012 / 10050000
+[INFO 23:36:46] my_main Estimated time left: 1 days, 4 hours, 39 minutes, 4 seconds. Time passed: 20 seconds
+[INFO 23:37:11] my_main Recent Stats | t_env:       4004 | Episode:     3024
+actor_loss:                0.7777	advantage_mean:           -0.8428	critic_loss:               3.7847	entropy_loss:              2.6467
+ep_length_mean:            1.3164	epsilon:                   0.9800	grad_norm:                 1.2361	lr:                        0.0005
+return_mean:             -29.4105	return_std:               35.4317	target_mean:              -1.8838	test_ep_length_mean:       1.0000
+test_return_mean:        -21.0000	test_return_std:          30.0000	
+[INFO 23:37:11] my_main t_env: 4014 / 10050000
+[INFO 23:37:11] my_main Estimated time left: 1 days, 11 hours, 28 minutes, 44 seconds. Time passed: 46 seconds
+[INFO 23:37:42] my_main Recent Stats | t_env:       6006 | Episode:     4536
+actor_loss:                0.4200	advantage_mean:           -0.4726	critic_loss:               0.1801	entropy_loss:              2.7440
+ep_length_mean:            1.3311	epsilon:                   0.9600	grad_norm:                 0.5429	lr:                        0.0005
+return_mean:             -28.8737	return_std:               36.6554	target_mean:              -0.1886	test_ep_length_mean:       1.0000
+test_return_mean:        -17.2500	test_return_std:          29.7647	
+[INFO 23:37:42] my_main t_env: 6017 / 10050000
+[INFO 23:37:42] my_main Estimated time left: 1 days, 18 hours, 2 minutes, 8 seconds. Time passed: 1 minutes, 16 seconds

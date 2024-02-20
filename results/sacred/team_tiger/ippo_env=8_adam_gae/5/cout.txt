@@ -1,0 +1,100 @@
+[INFO 19:45:50] pymarl Running command 'my_main'
+[INFO 19:45:50] pymarl Started run with ID "5"
+[DEBUG 19:45:50] my_main Started
+[INFO 19:45:50] my_main Experiment Parameters:
+[INFO 19:45:50] my_main 
+
+{   'accumulated_episodes': 8,
+    'action_selector': 'multinomial',
+    'agent': 'n_rnn',
+    'agent_output_type': 'pi_logits',
+    'batch_size': 64,
+    'batch_size_run': 8,
+    'buffer_cpu_only': True,
+    'buffer_size': 64,
+    'checkpoint_path': '',
+    'critic_coef': 0.5,
+    'critic_lr': 0.0005,
+    'entropy': 0.01,
+    'env': 'team_tiger',
+    'env_args': {   'env_args': None,
+                    'map_name': 'team_tiger',
+                    'seed': 946825359},
+    'eps_clip': 0.2,
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.0,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'gae_lambda': 0.95,
+    'gain': 0.01,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'label': 'default_label',
+    'learner': 'ppo_learner',
+    'learner_log_interval': 2000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.0005,
+    'mac': 'basic_mac',
+    'mask_before_softmax': True,
+    'mini_epochs': 8,
+    'name': 'ippo_env=8_adam_gae',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'run': 'default',
+    'runner': 'parallel',
+    'runner_log_interval': 2000,
+    'save_model': False,
+    'save_model_interval': 2000000,
+    'save_probs': True,
+    'save_replay': False,
+    'seed': 946825359,
+    't_max': 10050000,
+    'test_greedy': True,
+    'test_interval': 2000,
+    'test_nepisode': 96,
+    'use_cuda': False,
+    'use_layer_norm': True,
+    'use_orthogonal': True,
+    'use_tensorboard': False,
+    'use_value_norm': True}
+
+[INFO 19:45:50] my_main Beginning training for 10050000 timesteps
+/home/elem/repos/MARL/pymarl/src/components/episode_buffer.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 19:45:50] my_main t_env: 11 / 10050000
+[INFO 19:45:50] my_main Estimated time left: 1 minutes, 28 seconds. Time passed: 0 seconds
+[INFO 19:46:13] my_main Recent Stats | t_env:       2006 | Episode:     1504
+actor_loss:                0.7813	advantage_mean:           -0.8666	critic_loss:               1.1482	entropy_loss:              2.7596
+ep_length_mean:            1.3750	epsilon:                   1.0000	grad_norm:                 2.7733	lr:                        0.0005
+return_mean:             -26.5000	return_std:               39.7240	target_mean:              -0.8683	test_ep_length_mean:       1.0000
+test_return_mean:        -40.0000	test_return_std:           0.0000	
+[INFO 19:46:13] my_main t_env: 2015 / 10050000
+[INFO 19:46:13] my_main Estimated time left: 1 days, 7 hours, 9 minutes, 5 seconds. Time passed: 22 seconds
+[INFO 19:46:41] my_main t_env: 4017 / 10050000
+[INFO 19:46:41] my_main Estimated time left: 1 days, 15 hours, 41 minutes, 35 seconds. Time passed: 50 seconds
+[INFO 19:46:41] my_main Recent Stats | t_env:       4017 | Episode:     3000
+actor_loss:                1.1074	advantage_mean:           -1.2781	critic_loss:               1.0484	entropy_loss:              2.5323
+ep_length_mean:            1.3389	epsilon:                   0.9600	grad_norm:                 0.6522	lr:                        0.0005
+return_mean:             -27.5970	return_std:               36.0494	target_mean:              -1.0888	test_ep_length_mean:       1.0000
+test_return_mean:        -22.5625	test_return_std:          29.3633	
+[INFO 19:47:10] my_main t_env: 6023 / 10050000
+[INFO 19:47:10] my_main Estimated time left: 1 days, 15 hours, 58 minutes, 51 seconds. Time passed: 1 minutes, 19 seconds
+[INFO 19:47:10] my_main Recent Stats | t_env:       6023 | Episode:     4544
+actor_loss:                0.7869	advantage_mean:           -0.8714	critic_loss:               2.8141	entropy_loss:              2.6858
+ep_length_mean:            1.2992	epsilon:                   0.9398	grad_norm:                 0.9103	lr:                        0.0005
+return_mean:             -27.5946	return_std:               36.0850	target_mean:              -1.8465	test_ep_length_mean:       1.0000
+test_return_mean:        -17.8750	test_return_std:          29.8368	
+[INFO 19:47:39] my_main t_env: 8024 / 10050000
+[INFO 19:47:39] my_main Estimated time left: 1 days, 17 hours, 6 minutes, 21 seconds. Time passed: 1 minutes, 49 seconds
+[INFO 19:47:39] my_main Recent Stats | t_env:       8024 | Episode:     6056
+actor_loss:                0.8900	advantage_mean:           -0.9689	critic_loss:               0.4705	entropy_loss:              2.7310
+ep_length_mean:            1.3234	epsilon:                   0.9199	grad_norm:                 0.3365	lr:                        0.0005
+return_mean:             -27.8571	return_std:               36.3081	target_mean:              -0.4381	test_ep_length_mean:       1.0000
+test_return_mean:        -23.5000	test_return_std:          29.8957	
+Process Process-8:

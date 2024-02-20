@@ -1,0 +1,778 @@
+[INFO 17:01:23] pymarl Running command 'my_main'
+[INFO 17:01:23] pymarl Started run with ID "5"
+[DEBUG 17:01:23] my_main Started
+[INFO 17:01:23] my_main Experiment Parameters:
+[INFO 17:01:23] my_main 
+
+{   'action_selector': 'epsilon_greedy',
+    'agent': 'n_rnn',
+    'agent_output_type': 'q',
+    'batch_size': 128,
+    'batch_size_run': 8,
+    'buffer_cpu_only': True,
+    'buffer_size': 5000,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'env': 'team_box_pushing',
+    'env_args': {   'env_args': {   'horizon': 30},
+                    'map_name': 'team_box_pushing',
+                    'seed': 5403159},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_embed': 64,
+    'label': 'default_label',
+    'learner': 'nq_learner',
+    'learner_log_interval': 2000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.001,
+    'mac': 'n_mac',
+    'mixer': 'vdn',
+    'mixing_embed_dim': 32,
+    'name': 'vdn_env=8_adam_td_lambda',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'optimizer': 'adam',
+    'q_lambda': False,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'run': 'default',
+    'runner': 'parallel',
+    'runner_log_interval': 2000,
+    'save_model': False,
+    'save_model_interval': 2000000,
+    'save_replay': False,
+    'seed': 5403159,
+    't_max': 10050000,
+    'target_update_interval': 200,
+    'td_lambda': 0.6,
+    'test_greedy': True,
+    'test_interval': 2000,
+    'test_nepisode': 24,
+    'use_cuda': False,
+    'use_tensorboard': False}
+
+Mixer Size: 
+0.0K
+[INFO 17:01:23] my_main Beginning training for 10050000 timesteps
+/home/elem/repos/MARL/pymarl/src/components/episode_buffer.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+pid 3658995
+step 0
+pid 3658996
+pid 3658998
+step 0
+step 0
+pid 3658997
+step 0
+state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]actions [8, 4]
+
+state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+
+actions [4, 0]
+actions [2, 4]
+actions [9, 6]
+pid 3659000
+step 0
+pid 3659001
+step 0
+pid 3658999
+step 0
+state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [1, 3]
+state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [4, 7]
+state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [1, 3]
+pid 3659002
+step 0
+state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [1, 4]
+pid 3658995
+step 1
+pid 3658997
+pid 3658996
+step 1
+step 1
+state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+state [[1 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [7, 2]
+actions [4, 9]
+state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [12, 4]
+pid 3658998
+step 1
+state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [8, 10]
+pid 3658999
+pid 3659000
+step 1
+pid 3659001
+step 1
+step 1
+state [[1 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]state [[0 1]
+ [0 1]
+ [1 1]
+ [1 0]
+ [0 0]]
+
+actions [10, 0]
+actions [10, 13]
+state [[0 1]
+ [0 1]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [12, 10]
+pid 3659002
+step 1
+state [[0 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [11, 10]
+pid 3658995
+step 2
+pid 3658996
+step 2
+pid 3658997
+step 2
+state [[1 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+state [[1 1]
+ [1 0]
+ [0 1]
+ [1 0]
+ [0 0]]actions [10, 4]
+
+actions [5, 5]
+actions [1, 7]
+pid 3658998
+step 2
+state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [13, 6]
+pid 3658999
+pid 3659001
+step 2
+step 2
+state [[1 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [7, 5]
+pid 3659000
+step 2
+state [[0 1]
+ [0 1]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [7, 13]
+state [[0 1]
+ [0 1]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [9, 10]
+pid 3659002
+step 2
+state [[0 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [5, 1]
+pid 3658995
+step 3
+pid 3658996
+step 3
+state [[0 1]
+ [1 0]
+ [0 1]
+ [1 0]
+ [0 0]]state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+
+actions [12, 3]
+actions [13, 0]
+pid 3658997
+step 3
+state [[1 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [0, 0]
+pid 3658998
+step 3
+state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [4, 13]
+pid 3659001
+step 3
+pid 3659000
+step 3
+state [[1 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [3, 9]
+state [[0 1]
+ [0 1]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [8, 14]
+pid 3658999
+step 3
+state [[0 1]
+ [0 1]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [0, 6]
+pid 3659002
+step 3
+state [[0 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [7, 13]
+pid 3658995
+step 4
+state [[0 1]
+ [1 1]
+ [0 1]
+ [1 0]
+ [0 0]]
+actions [9, 9]
+pid 3658996
+pid 3658997
+step 4
+step 4
+state [[1 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+
+actions [6, 10]
+actions [13, 0]
+pid 3658998
+step 4
+state [[1 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [4, 4]
+pid 3658999
+pid 3659000
+step 4
+step 4
+state [[0 1]
+ [0 1]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [3, 4]
+state [[0 1]
+ [0 1]
+ [1 1]
+ [1 0]
+ [0 0]]pid 3659001
+step 4
+
+state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [14, 6]
+actions [1, 7]
+pid 3659002
+step 4
+state [[0 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [11, 5]
+pid 3658995
+step 5
+state [[0 1]
+ [1 1]
+ [0 1]
+ [1 0]
+ [0 0]]
+actions [14, 6]
+pid 3658996
+step 5
+state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [2, 1]
+pid 3658997
+step 5
+pid 3658998
+step 5
+state [[1 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+state [[1 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]actions [9, 0]
+
+actions [13, 10]
+pid 3659000
+step 5
+state [[0 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [2, 2]
+pid 3658999
+step 5
+state [[0 1]
+ [0 1]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [13, 6]
+pid 3659001
+step 5
+state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [11, 2]
+pid 3659002
+step 5
+state [[0 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [9, 8]
+pid 3658995
+step 6
+state [[0 1]
+ [1 1]
+ [0 1]
+ [1 0]
+ [0 0]]
+actions [8, 2]
+pid 3658996
+step 6
+state [[1 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [2, 3]
+pid 3658997
+step 6
+state [[1 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [2, 1]
+pid 3658998
+step 6
+state [[1 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [4, 13]
+pid 3658999
+step 6
+state [[0 1]
+ [0 1]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [8, 4]
+pid 3659000
+step 6
+state [[1 1]
+ [1 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [10, 10]
+pid 3659001
+step 6
+state [[1 1]
+ [1 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [1, 14]
+pid 3659002
+step 6
+state [[0 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [4, 1]
+pid 3658995
+step 7
+state [[0 1]
+ [1 1]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [2, 1]
+pid 3658996
+step 7
+state [[1 1]
+ [0 1]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [14, 10]
+pid 3658997
+step 7
+state [[1 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [1, 6]
+pid 3658998
+step 7
+state [[1 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [5, 5]
+pid 3658999
+step 7
+state [[0 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [11, 5]
+pid 3659000
+step 7
+state [[1 1]
+ [1 0]
+ [1 0]
+ [1 0]
+ [0 0]]
+actions [10, 13]
+pid 3659001
+step 7
+state [[0 1]
+ [1 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [3, 8]
+pid 3659002
+step 7
+state [[0 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [8, 0]
+pid 3658995
+step 8
+state [[1 1]
+ [0 1]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [5, 6]
+pid 3658996
+step 8
+state [[1 1]
+ [0 1]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [7, 11]
+pid 3658997
+step 8
+state [[0 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [11, 1]
+pid 3658998
+step 8
+state [[1 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [1, 8]
+pid 3658999
+step 8
+state [[0 1]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [4, 14]
+pid 3659000
+step 8
+state [[1 1]
+ [1 0]
+ [1 0]
+ [1 0]
+ [0 0]]
+actions [1, 10]
+pid 3659001
+step 8
+state [[0 1]
+ [1 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [0, 4]
+pid 3659002
+step 8
+state [[0 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [0, 2]
+pid 3658995
+step 9
+state [[1 1]
+ [0 1]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [1, 9]
+pid 3658996
+step 9
+state [[1 1]
+ [0 1]
+ [0 1]
+ [1 0]
+ [0 0]]
+actions [9, 5]
+pid 3658997
+step 9
+state [[0 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [9, 6]
+pid 3658998
+step 9
+state [[0 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [4, 13]
+pid 3658999
+step 9
+state [[0 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [6, 1]
+pid 3659000
+step 9
+state [[0 1]
+ [1 0]
+ [1 0]
+ [1 0]
+ [0 0]]
+actions [9, 7]
+pid 3659001
+step 9
+state [[0 1]
+ [1 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [3, 3]
+pid 3659002
+step 9
+state [[0 0]
+ [1 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [11, 13]
+pid 3658995
+step 10
+state [[0 1]
+ [0 1]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [2, 10]
+None
+pid 3658996
+step 10
+None
+state [[1 1]
+ [0 1]
+ [0 1]
+ [1 0]
+ [0 0]]
+actions [2, 7]
+pid 3658997
+step 10
+state [[0 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [8, 6]
+None
+pid 3658998
+step 10
+state [[0 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [6, 10]
+pid 3658999
+step 10
+state [[0 0]
+ [0 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [10, 10]
+pid 3659000
+step 10
+state [[0 1]
+ [1 0]
+ [0 0]
+ [1 0]
+ [0 0]]
+actions [12, 0]
+pid 3659001
+step 10
+state [[0 1]
+ [1 1]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [6, 9]
+pid 3659002
+step 10
+None
+None
+None
+None
+None
+state [[0 0]
+ [1 0]
+ [1 1]
+ [1 0]
+ [0 0]]
+actions [13, 12]

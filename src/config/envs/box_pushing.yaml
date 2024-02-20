@@ -1,0 +1,13 @@
+env: box_pushing
+
+env_args:
+    map_name: "box_pushing"
+    env_args:
+        horizon: 100
+learner_log_interval: 2000
+log_interval: 2000
+runner_log_interval: 2000
+t_max: 100500
+test_interval: 2000
+test_nepisode: 24
+test_greedy: True

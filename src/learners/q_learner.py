@@ -2,19 +2,22 @@ import copy
 from components.episode_buffer import EpisodeBatch
 from modules.mixers.vdn import VDNMixer
 from modules.mixers.qmix import QMixer
+from utils.rl_utils import build_td_lambda_targets
+from envs.matrix_game import print_matrix_status
 import torch as th
-from torch.optim import RMSprop
-
+from torch.optim import RMSprop, Adam
+import numpy as np
 
 class QLearner:
     def __init__(self, mac, scheme, logger, args):
         self.args = args
         self.mac = mac
         self.logger = logger
-
+        
         self.params = list(mac.parameters())
 
         self.last_target_update_episode = 0
+        self.device = th.device('cuda' if args.use_cuda  else 'cpu')
 
         self.mixer = None
         if args.mixer is not None:
@@ -27,12 +30,17 @@ class QLearner:
             self.params += list(self.mixer.parameters())
             self.target_mixer = copy.deepcopy(self.mixer)
 
-        self.optimiser = RMSprop(params=self.params, lr=args.lr, alpha=args.optim_alpha, eps=args.optim_eps)
+        if self.args.optimizer == 'adam':
+            self.optimiser = Adam(params=self.params,  lr=args.lr)
+        else:
+            self.optimiser = RMSprop(params=self.params, lr=args.lr, alpha=args.optim_alpha, eps=args.optim_eps)
 
         # a little wasteful to deepcopy (e.g. duplicates action selector), but should work for any MAC
         self.target_mac = copy.deepcopy(mac)
 
         self.log_stats_t = -self.args.learner_log_interval - 1
+        
+        self.train_t = 0
 
     def train(self, batch: EpisodeBatch, t_env: int, episode_num: int):
         # Get the relevant quantities
@@ -42,7 +50,7 @@ class QLearner:
         mask = batch["filled"][:, :-1].float()
         mask[:, 1:] = mask[:, 1:] * (1 - terminated[:, :-1])
         avail_actions = batch["avail_actions"]
-
+        
         # Calculate estimated Q-Values
         mac_out = []
         self.mac.init_hidden(batch.batch_size)
@@ -53,7 +61,8 @@ class QLearner:
 
         # Pick the Q-Values for the actions taken by each agent
         chosen_action_qvals = th.gather(mac_out[:, :-1], dim=3, index=actions).squeeze(3)  # Remove the last dim
-
+        chosen_action_qvals_back = chosen_action_qvals
+        
         # Calculate the Q-Values necessary for the target
         target_mac_out = []
         self.target_mac.init_hidden(batch.batch_size)
@@ -94,8 +103,8 @@ class QLearner:
         masked_td_error = td_error * mask
 
         # Normal L2 loss, take mean over actual data
-        loss = (masked_td_error ** 2).sum() / mask.sum()
-
+        loss = 0.5 * (masked_td_error ** 2).sum() / mask.sum()
+        
         # Optimise
         self.optimiser.zero_grad()
         loss.backward()
@@ -107,19 +116,23 @@ class QLearner:
             self.last_target_update_episode = episode_num
 
         if t_env - self.log_stats_t >= self.args.learner_log_interval:
-            self.logger.log_stat("loss", loss.item(), t_env)
+            self.logger.log_stat("loss_td", loss.item(), t_env)
             self.logger.log_stat("grad_norm", grad_norm, t_env)
             mask_elems = mask.sum().item()
             self.logger.log_stat("td_error_abs", (masked_td_error.abs().sum().item()/mask_elems), t_env)
             self.logger.log_stat("q_taken_mean", (chosen_action_qvals * mask).sum().item()/(mask_elems * self.args.n_agents), t_env)
             self.logger.log_stat("target_mean", (targets * mask).sum().item()/(mask_elems * self.args.n_agents), t_env)
             self.log_stats_t = t_env
+            
+            # print estimated matrix
+            if self.args.env == "one_step_matrix_game":
+                print_matrix_status(batch, self.mixer, mac_out)
 
     def _update_targets(self):
         self.target_mac.load_state(self.mac)
         if self.mixer is not None:
             self.target_mixer.load_state_dict(self.mixer.state_dict())
-        self.logger.console_logger.info("Updated target network")
+        #self.logger.console_logger.info("Updated target network")
 
     def cuda(self):
         self.mac.cuda()

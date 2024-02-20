@@ -1,0 +1,123 @@
+[INFO 04:00:03] pymarl Running command 'my_main'
+[INFO 04:00:03] pymarl Started run with ID "1"
+[DEBUG 04:00:03] my_main Started
+[INFO 04:00:03] my_main Experiment Parameters:
+[INFO 04:00:03] my_main 
+
+{   'action_selector': 'epsilon_greedy',
+    'agent': 'rnn',
+    'agent_output_type': 'q',
+    'batch_size': 64,
+    'batch_size_run': 4,
+    'buffer_cpu_only': True,
+    'buffer_size': 2500,
+    'central_action_embed': 1,
+    'central_agent': 'central_rnn',
+    'central_loss': 1,
+    'central_mac': 'basic_central_mac',
+    'central_mixer': 'ff',
+    'central_mixing_embed_dim': 256,
+    'central_rnn_hidden_dim': 64,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'double_q': True,
+    'env': 'rock_sampling',
+    'env_args': {   'env_args': {   'horizon': 1500},
+                    'map_name': 'rock_sampling',
+                    'seed': 285334669},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_embed': 64,
+    'hypernet_layers': 2,
+    'hysteretic_qmix': False,
+    'label': 'default_label',
+    'learner': 'max_q_learner',
+    'learner_log_interval': 2000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.001,
+    'mac': 'basic_mac',
+    'mixer': 'qmix',
+    'mixing_embed_dim': 32,
+    'name': 'cw_qmix_env=4_adam_td_lambda',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'qmix_loss': 1,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'run': 'default',
+    'runner': 'parallel',
+    'runner_log_interval': 2000,
+    'save_model': False,
+    'save_model_interval': 2000000,
+    'save_replay': False,
+    'seed': 285334669,
+    't_max': 3350000,
+    'target_update_interval': 200,
+    'td_lambda': 0.6,
+    'test_greedy': True,
+    'test_interval': 20000,
+    'test_nepisode': 24,
+    'use_cuda': True,
+    'use_tensorboard': False,
+    'w': 0.1}
+
+Mixer Size: 
+161.411K
+[INFO 04:00:05] my_main Beginning training for 3350000 timesteps
+/home/elem/repos/MARL/pymarl/src/components/episode_buffer.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 04:00:09] my_main t_env: 5887 / 3350000
+[INFO 04:00:09] my_main Estimated time left: 7 minutes, 46 seconds. Time passed: 3 seconds
+[INFO 04:00:34] my_main Recent Stats | t_env:       5887 | Episode:        4
+ep_length_mean:          1471.7500	epsilon:                   1.0000	return_mean:             -3972.2500	return_std:              488.8749
+test_ep_length_mean:     1500.0000	test_return_mean:        -13107.6250	test_return_std:         3204.8108	
+[INFO 04:00:38] my_main Recent Stats | t_env:      10668 | Episode:        8
+ep_length_mean:          1195.2500	epsilon:                   0.9441	return_mean:             -3033.2500	return_std:              2487.3252
+
+[INFO 04:00:41] my_main Recent Stats | t_env:      16379 | Episode:       12
+ep_length_mean:          1427.7500	epsilon:                   0.8987	return_mean:             -4411.7500	return_std:              1631.8544
+
+[INFO 04:00:45] my_main Recent Stats | t_env:      22148 | Episode:       16
+ep_length_mean:          1442.2500	epsilon:                   0.8444	return_mean:             -5630.2500	return_std:              1254.4689
+
+[INFO 04:00:49] my_main t_env: 26410 / 3350000
+[INFO 04:00:49] my_main Estimated time left: 1 hours, 47 minutes, 37 seconds. Time passed: 43 seconds
+[INFO 04:01:13] my_main Recent Stats | t_env:      26410 | Episode:       20
+ep_length_mean:          1065.5000	epsilon:                   0.7896	return_mean:             -2793.7500	return_std:              1858.8885
+test_ep_length_mean:     1500.0000	test_return_mean:        -12543.8330	test_return_std:         4198.0308	
+[INFO 04:01:17] my_main Recent Stats | t_env:      32009 | Episode:       24
+ep_length_mean:          1399.7500	epsilon:                   0.7491	return_mean:             -5204.0000	return_std:              843.3620
+
+[INFO 04:01:21] my_main Recent Stats | t_env:      38009 | Episode:       28
+ep_length_mean:          1500.0000	epsilon:                   0.6959	return_mean:             -7519.0000	return_std:              1457.4003
+
+[INFO 04:01:24] my_main Recent Stats | t_env:      43642 | Episode:       32
+ep_length_mean:          1408.2500	epsilon:                   0.6389	return_mean:             -5462.7500	return_std:              1104.7285
+
+[INFO 04:01:28] my_main t_env: 49642 / 3350000
+[INFO 04:01:28] my_main Estimated time left: 1 hours, 32 minutes, 42 seconds. Time passed: 1 minutes, 22 seconds
+[INFO 04:01:51] my_main Recent Stats | t_env:      49642 | Episode:       36
+ep_length_mean:          1500.0000	epsilon:                   0.5854	return_mean:             -7293.2500	return_std:              1417.2393
+test_ep_length_mean:     1500.0000	test_return_mean:        -12603.8330	test_return_std:         3864.7004	
+[INFO 04:01:55] my_main Recent Stats | t_env:      55642 | Episode:       40
+ep_length_mean:          1500.0000	epsilon:                   0.5284	return_mean:             -7679.2500	return_std:              1745.7203
+
+[INFO 04:01:59] my_main Recent Stats | t_env:      61642 | Episode:       44
+ep_length_mean:          1500.0000	epsilon:                   0.4714	return_mean:             -7892.7500	return_std:              2383.8027
+
+[INFO 04:02:02] my_main Recent Stats | t_env:      67642 | Episode:       48
+ep_length_mean:          1500.0000	epsilon:                   0.4144	return_mean:             -7983.5000	return_std:              2129.4355
+
+[INFO 04:02:06] my_main t_env: 73642 / 3350000
+[INFO 04:02:06] my_main Estimated time left: 1 hours, 27 minutes, 21 seconds. Time passed: 2 minutes, 1 seconds
+[INFO 04:02:30] my_main Recent Stats | t_env:      73642 | Episode:       52
+ep_length_mean:          1500.0000	epsilon:                   0.3574	return_mean:             -10177.2500	return_std:              1720.9790
+test_ep_length_mean:     1500.0000	test_return_mean:        -12616.6670	test_return_std:         4128.6821	

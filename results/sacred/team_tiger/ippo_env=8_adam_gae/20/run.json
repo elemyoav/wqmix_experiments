@@ -1,0 +1,88 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/home/elem/repos/MARL/pymarl/src",
+    "dependencies": [
+      "munch==2.3.2",
+      "numpy==1.21.6",
+      "PyYAML==3.13",
+      "sacred==0.7.2",
+      "torch==1.4.0"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_e38a6aa3ab3e3822a9dcb831fea40dfd.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/elem/anaconda3/envs/pymarl/lib/python3.7/site-packages/sacred/config/captured_function.py\", line 48, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"src/main.py\", line 46, in my_main\n    run_REGISTRY[_config['run']](_run, config, _log)\n",
+    "  File \"/home/elem/repos/MARL/pymarl/src/run/run.py\", line 54, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"/home/elem/repos/MARL/pymarl/src/run/run.py\", line 178, in run_sequential\n    episode_batch = runner.run(test_mode=False)\n",
+    "  File \"/home/elem/repos/MARL/pymarl/src/runners/parallel_runner.py\", line 121, in run\n    actions, probs = self.mac.select_actions(self.batch, t_ep=self.t, t_env=self.t_env, bs=envs_not_terminated, test_mode=test_mode)\n",
+    "  File \"/home/elem/repos/MARL/pymarl/src/controllers/basic_controller.py\", line 24, in select_actions\n    chosen_actions = self.action_selector.select_action(agent_outputs[bs], avail_actions[bs], t_env, test_mode=test_mode)\n",
+    "  File \"/home/elem/repos/MARL/pymarl/src/components/action_selectors.py\", line 99, in select_action\n    picked_actions = Categorical(masked_policies).sample().long()\n",
+    "  File \"/home/elem/anaconda3/envs/pymarl/lib/python3.7/site-packages/torch/distributions/categorical.py\", line 107, in sample\n    sample_2d = torch.multinomial(probs_2d, 1, True)\n",
+    "RuntimeError: invalid multinomial distribution (encountering probability entry < 0)\n"
+  ],
+  "heartbeat": "2024-02-18T20:15:13.886230",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz",
+    "gpus": {
+      "driver_version": "535.154.05",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce MX330",
+          "persistence_mode": false,
+          "total_memory": 2048
+        }
+      ]
+    },
+    "hostname": "elem-IdeaPad-Flex-5-15IIL05",
+    "os": [
+      "Linux",
+      "Linux-6.5.0-17-generic-x86_64-with-debian-bookworm-sid"
+    ],
+    "python_version": "3.7.16"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat_interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print_config": false,
+      "--priority": null,
+      "--queue": false,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2024-02-18T19:52:02.809096",
+  "status": "FAILED",
+  "stop_time": "2024-02-18T20:15:13.902872"
+}

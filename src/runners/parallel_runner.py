@@ -4,6 +4,7 @@ from components.episode_buffer import EpisodeBatch
 from multiprocessing import Pipe, Process
 import numpy as np
 import torch as th
+import traceback
 
 
 # Based (very) heavily on SubprocVecEnv from OpenAI Baselines
@@ -11,15 +12,27 @@ import torch as th
 class ParallelRunner:
 
     def __init__(self, args, logger):
+    
+    
+        #As a test, run the box_pushing class usign a fixed best policy and observe the outcomes.
+    
+    
+    
         self.args = args
         self.logger = logger
         self.batch_size = self.args.batch_size_run
+        
+        #self.batch_size = 1
 
         # Make subprocesses for the envs
         self.parent_conns, self.worker_conns = zip(*[Pipe() for _ in range(self.batch_size)])
         env_fn = env_REGISTRY[self.args.env]
-        self.ps = [Process(target=env_worker, args=(worker_conn, CloudpickleWrapper(partial(env_fn, **self.args.env_args))))
-                            for worker_conn in self.worker_conns]
+        self.ps = []
+       
+        for i, worker_conn in enumerate(self.worker_conns):
+            ps = Process(target=env_worker, 
+                    args=(worker_conn, CloudpickleWrapper(partial(env_fn, **self.args.env_args))))
+            self.ps.append(ps)
 
         for p in self.ps:
             p.daemon = True
@@ -39,6 +52,8 @@ class ParallelRunner:
         self.test_stats = {}
 
         self.log_train_stats_t = -100000
+        
+        
 
     def setup(self, scheme, groups, preprocess, mac):
         self.new_batch = partial(EpisodeBatch, scheme, groups, self.batch_size, self.episode_limit + 1,
@@ -63,7 +78,7 @@ class ParallelRunner:
 
         # Reset the envs
         for parent_conn in self.parent_conns:
-            parent_conn.send(("reset", None))
+            parent_conn.send(("reset", None, False))
 
         pre_transition_data = {
             "state": [],
@@ -85,6 +100,10 @@ class ParallelRunner:
     def run(self, test_mode=False):
         self.reset()
 
+        #if test_mode:
+         #   print("************************")
+
+
         all_terminated = False
         episode_returns = [0 for _ in range(self.batch_size)]
         episode_lengths = [0 for _ in range(self.batch_size)]
@@ -92,18 +111,29 @@ class ParallelRunner:
         terminated = [False for _ in range(self.batch_size)]
         envs_not_terminated = [b_idx for b_idx, termed in enumerate(terminated) if not termed]
         final_env_infos = []  # may store extra stats like battle won. this is filled in ORDER OF TERMINATION
-
+        
+        save_probs = getattr(self.args, "save_probs", False)
         while True:
 
             # Pass the entire batch of experiences up till now to the agents
             # Receive the actions for each agent at this timestep in a batch for each un-terminated env
-            actions = self.mac.select_actions(self.batch, t_ep=self.t, t_env=self.t_env, bs=envs_not_terminated, test_mode=test_mode)
+            if save_probs:
+                actions, probs = self.mac.select_actions(self.batch, t_ep=self.t, t_env=self.t_env, bs=envs_not_terminated, test_mode=test_mode)
+            else:
+                actions = self.mac.select_actions(self.batch, t_ep=self.t, t_env=self.t_env, bs=envs_not_terminated, test_mode=test_mode)
+                
+                
+            #if test_mode:
+            #    print(str(actions))
             cpu_actions = actions.to("cpu").numpy()
 
             # Update the actions taken
             actions_chosen = {
-                "actions": actions.unsqueeze(1)
+                "actions": actions.unsqueeze(1).to("cpu"),
             }
+            if save_probs:
+                actions_chosen["probs"] = probs.unsqueeze(1).to("cpu")
+            
             self.batch.update(actions_chosen, bs=envs_not_terminated, ts=self.t, mark_filled=False)
 
             # Send actions to each env
@@ -111,7 +141,10 @@ class ParallelRunner:
             for idx, parent_conn in enumerate(self.parent_conns):
                 if idx in envs_not_terminated: # We produced actions for this env
                     if not terminated[idx]: # Only send the actions to the env if it hasn't terminated
-                        parent_conn.send(("step", cpu_actions[action_idx]))
+                        #if test_mode:
+                        #    if cpu_actions[action_idx][0] != cpu_actions[action_idx][1]:
+                        #        print(str(cpu_actions[action_idx]))
+                        parent_conn.send(("step", cpu_actions[action_idx], test_mode))
                     action_idx += 1 # actions is not a list over every env
 
             # Update envs_not_terminated
@@ -153,15 +186,16 @@ class ParallelRunner:
                     post_transition_data["terminated"].append((env_terminated,))
 
                     # Data for the next timestep needed to select an action
-                    pre_transition_data["state"].append(data["state"])
                     pre_transition_data["avail_actions"].append(data["avail_actions"])
                     pre_transition_data["obs"].append(data["obs"])
+                    pre_transition_data["state"].append(data["state"])
 
             # Add post_transiton data into the batch
             self.batch.update(post_transition_data, bs=envs_not_terminated, ts=self.t, mark_filled=False)
 
             # Move onto the next timestep
             self.t += 1
+
 
             # Add the pre-transition data
             self.batch.update(pre_transition_data, bs=envs_not_terminated, ts=self.t, mark_filled=True)
@@ -171,7 +205,7 @@ class ParallelRunner:
 
         # Get stats back for each env
         for parent_conn in self.parent_conns:
-            parent_conn.send(("get_stats",None))
+            parent_conn.send(("get_stats",None, False))
 
         env_stats = []
         for parent_conn in self.parent_conns:
@@ -182,6 +216,7 @@ class ParallelRunner:
         cur_returns = self.test_returns if test_mode else self.train_returns
         log_prefix = "test_" if test_mode else ""
         infos = [cur_stats] + final_env_infos
+
         cur_stats.update({k: sum(d.get(k, 0) for d in infos) for k in set.union(*[set(d) for d in infos])})
         cur_stats["n_episodes"] = self.batch_size + cur_stats.get("n_episodes", 0)
         cur_stats["ep_length"] = sum(episode_lengths) + cur_stats.get("ep_length", 0)
@@ -214,7 +249,13 @@ def env_worker(remote, env_fn):
     # Make environment
     env = env_fn.x()
     while True:
-        cmd, data = remote.recv()
+        values = remote.recv()
+        cmd = values[0]
+        data = values[1]
+        if len(values) == 3:
+            test_mode = values[2]
+            env.test_mode = test_mode
+        #cmd, data, test_mode = remote.recv()
         if cmd == "step":
             actions = data
             # Take a step in the environment

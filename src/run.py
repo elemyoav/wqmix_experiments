@@ -26,7 +26,8 @@ def run(_run, _config, _log):
 
     # setup loggers
     logger = Logger(_log)
-
+    
+    
     _log.info("Experiment Parameters:")
     experiment_params = pprint.pformat(_config,
                                        indent=4,
@@ -83,6 +84,11 @@ def run_sequential(args, logger):
     args.n_agents = env_info["n_agents"]
     args.n_actions = env_info["n_actions"]
     args.state_shape = env_info["state_shape"]
+    
+    print( "****************************")
+    print( args.n_agents)
+    print( args.n_actions)
+    print( args.state_shape)
 
     # Default/Base scheme
     scheme = {
@@ -103,6 +109,8 @@ def run_sequential(args, logger):
     buffer = ReplayBuffer(scheme, groups, args.buffer_size, env_info["episode_limit"] + 1,
                           preprocess=preprocess,
                           device="cpu" if args.buffer_cpu_only else args.device)
+
+    print(args.mac)
 
     # Setup multiagent controller here
     mac = mac_REGISTRY[args.mac](buffer.scheme, groups, args)

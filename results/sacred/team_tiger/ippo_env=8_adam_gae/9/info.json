@@ -1,0 +1,100 @@
+{
+  "actor_loss": [
+    0.6696308851242065
+  ],
+  "actor_loss_T": [
+    85
+  ],
+  "advantage_mean": [
+    -0.7600546444163603
+  ],
+  "advantage_mean_T": [
+    85
+  ],
+  "critic_loss": [
+    1.2275984287261963
+  ],
+  "critic_loss_T": [
+    85
+  ],
+  "entropy_loss": [
+    2.7595505714416504
+  ],
+  "entropy_loss_T": [
+    85
+  ],
+  "ep_length_mean": [
+    1.375,
+    1.3494623655913978
+  ],
+  "ep_length_mean_T": [
+    11,
+    2019
+  ],
+  "episode": [
+    1480
+  ],
+  "episode_T": [
+    2000
+  ],
+  "epsilon": [
+    1.0,
+    0.97992
+  ],
+  "epsilon_T": [
+    11,
+    2019
+  ],
+  "grad_norm": [
+    1.6816476712919544
+  ],
+  "grad_norm_T": [
+    85
+  ],
+  "lr": [
+    0.0005
+  ],
+  "lr_T": [
+    85
+  ],
+  "return_mean": [
+    -11.5,
+    -29.4872311827957
+  ],
+  "return_mean_T": [
+    11,
+    2019
+  ],
+  "return_std": [
+    31.400636936215164,
+    36.50756437112925
+  ],
+  "return_std_T": [
+    11,
+    2019
+  ],
+  "target_mean": [
+    -0.7615458768956801
+  ],
+  "target_mean_T": [
+    85
+  ],
+  "test_ep_length_mean": [
+    1.0
+  ],
+  "test_ep_length_mean_T": [
+    11
+  ],
+  "test_return_mean": [
+    -21.625
+  ],
+  "test_return_mean_T": [
+    11
+  ],
+  "test_return_std": [
+    29.99348887675457
+  ],
+  "test_return_std_T": [
+    11
+  ]
+}

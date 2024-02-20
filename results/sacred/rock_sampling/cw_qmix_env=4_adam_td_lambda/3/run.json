@@ -1,0 +1,92 @@
+{
+  "artifacts": [],
+  "command": "my_main",
+  "experiment": {
+    "base_dir": "/home/elem/repos/MARL/pymarl/src",
+    "dependencies": [
+      "munch==2.3.2",
+      "numpy==1.21.6",
+      "PyYAML==3.13",
+      "sacred==0.7.2",
+      "torch==1.4.0"
+    ],
+    "mainfile": "main.py",
+    "name": "pymarl",
+    "repositories": [],
+    "sources": [
+      [
+        "main.py",
+        "_sources/main_e38a6aa3ab3e3822a9dcb831fea40dfd.py"
+      ]
+    ]
+  },
+  "fail_trace": [
+    "Traceback (most recent call last):\n",
+    "  File \"/home/elem/anaconda3/envs/pymarl/lib/python3.7/site-packages/sacred/config/captured_function.py\", line 48, in captured_function\n    result = wrapped(*args, **kwargs)\n",
+    "  File \"src/main.py\", line 46, in my_main\n    run_REGISTRY[_config['run']](_run, config, _log)\n",
+    "  File \"/home/elem/repos/MARL/pymarl/src/run/run.py\", line 54, in run\n    run_sequential(args=args, logger=logger)\n",
+    "  File \"/home/elem/repos/MARL/pymarl/src/run/run.py\", line 195, in run_sequential\n    learner.train(episode_sample, runner.t_env, episode)\n",
+    "  File \"/home/elem/repos/MARL/pymarl/src/learners/max_q_learner.py\", line 158, in train\n    central_chosen_action_qvals = self.central_mixer(central_chosen_action_qvals_agents, batch[\"state\"][:, :-1])\n",
+    "  File \"/home/elem/anaconda3/envs/pymarl/lib/python3.7/site-packages/torch/nn/modules/module.py\", line 532, in __call__\n    result = self.forward(*input, **kwargs)\n",
+    "  File \"/home/elem/repos/MARL/pymarl/src/modules/mixers/qmix_central_no_hyper.py\", line 42, in forward\n    vs = self.V(states)\n",
+    "  File \"/home/elem/anaconda3/envs/pymarl/lib/python3.7/site-packages/torch/nn/modules/module.py\", line 532, in __call__\n    result = self.forward(*input, **kwargs)\n",
+    "  File \"/home/elem/anaconda3/envs/pymarl/lib/python3.7/site-packages/torch/nn/modules/container.py\", line 100, in forward\n    input = module(input)\n",
+    "  File \"/home/elem/anaconda3/envs/pymarl/lib/python3.7/site-packages/torch/nn/modules/module.py\", line 532, in __call__\n    result = self.forward(*input, **kwargs)\n",
+    "  File \"/home/elem/anaconda3/envs/pymarl/lib/python3.7/site-packages/torch/nn/modules/activation.py\", line 94, in forward\n    return F.relu(input, inplace=self.inplace)\n",
+    "  File \"/home/elem/anaconda3/envs/pymarl/lib/python3.7/site-packages/torch/nn/functional.py\", line 914, in relu\n    result = torch.relu(input)\n",
+    "RuntimeError: CUDA out of memory. Tried to allocate 32.00 MiB (GPU 0; 1.95 GiB total capacity; 1.47 GiB already allocated; 12.62 MiB free; 1.52 GiB reserved in total by PyTorch)\n"
+  ],
+  "heartbeat": "2024-02-12T02:52:46.056786",
+  "host": {
+    "ENV": {},
+    "cpu": "Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz",
+    "gpus": {
+      "driver_version": "535.154.05",
+      "gpus": [
+        {
+          "model": "NVIDIA GeForce MX330",
+          "persistence_mode": false,
+          "total_memory": 2048
+        }
+      ]
+    },
+    "hostname": "elem-IdeaPad-Flex-5-15IIL05",
+    "os": [
+      "Linux",
+      "Linux-6.5.0-17-generic-x86_64-with-debian-bookworm-sid"
+    ],
+    "python_version": "3.7.16"
+  },
+  "meta": {
+    "command": "my_main",
+    "options": {
+      "--beat_interval": null,
+      "--capture": null,
+      "--comment": null,
+      "--debug": false,
+      "--enforce_clean": false,
+      "--file_storage": null,
+      "--force": false,
+      "--help": false,
+      "--loglevel": null,
+      "--mongo_db": null,
+      "--name": null,
+      "--pdb": false,
+      "--print_config": false,
+      "--priority": null,
+      "--queue": false,
+      "--sql": null,
+      "--tiny_db": null,
+      "--unobserved": false,
+      "COMMAND": null,
+      "UPDATE": [],
+      "help": false,
+      "with": false
+    }
+  },
+  "resources": [],
+  "result": null,
+  "start_time": "2024-02-12T02:51:55.690801",
+  "status": "FAILED",
+  "stop_time": "2024-02-12T02:52:46.061448"
+}

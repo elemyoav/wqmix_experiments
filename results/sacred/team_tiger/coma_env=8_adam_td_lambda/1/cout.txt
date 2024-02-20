@@ -1,0 +1,139 @@
+[INFO 00:48:01] pymarl Running command 'my_main'
+[INFO 00:48:01] pymarl Started run with ID "1"
+[DEBUG 00:48:01] my_main Started
+[INFO 00:48:01] my_main Experiment Parameters:
+[INFO 00:48:01] my_main 
+
+{   'action_selector': 'multinomial',
+    'agent': 'rnn',
+    'agent_output_type': 'pi_logits',
+    'batch_size': 128,
+    'batch_size_run': 8,
+    'buffer_cpu_only': True,
+    'buffer_size': 5000,
+    'checkpoint_path': '',
+    'critic_baseline_fn': 'coma',
+    'critic_lr': 0.0005,
+    'critic_q_fn': 'coma',
+    'critic_train_mode': 'seq',
+    'critic_train_reps': 1,
+    'entropy': 0.09,
+    'env': 'team_tiger',
+    'env_args': {   'env_args': None,
+                    'map_name': 'team_tiger',
+                    'seed': 171917734,
+                    'state_last_action': False},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.01,
+    'epsilon_start': 0.5,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'label': 'default_label',
+    'learner': 'coma_learner',
+    'learner_log_interval': 2000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.0005,
+    'mac': 'basic_mac',
+    'mask_before_softmax': True,
+    'name': 'coma_env=8_adam_td_lambda',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'q_nstep': 0,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'run': 'default',
+    'runner': 'parallel',
+    'runner_log_interval': 2000,
+    'save_model': False,
+    'save_model_interval': 2000000,
+    'save_replay': False,
+    'seed': 171917734,
+    't_max': 100500,
+    'target_update_interval': 200,
+    'td_lambda': 0.6,
+    'test_greedy': True,
+    'test_interval': 2000,
+    'test_nepisode': 96,
+    'use_cuda': True,
+    'use_tensorboard': False}
+
+[INFO 00:48:04] my_main Beginning training for 100500 timesteps
+/home/elem/repos/MARL/pymarl/src/components/episode_buffer.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 00:48:04] my_main t_env: 11 / 100500
+[INFO 00:48:04] my_main Estimated time left: 1 seconds. Time passed: 0 seconds
+[INFO 00:48:05] my_main Updated target network
+[INFO 00:48:07] my_main Updated target network
+[INFO 00:48:09] my_main Updated target network
+[INFO 00:48:09] my_main Recent Stats | t_env:       2004 | Episode:     1640
+advantage_mean:            0.0041	agent_grad_norm:           0.0165	coma_loss:                 0.0122	critic_grad_norm:         30.0760
+critic_loss:             1794.4938	ep_length_mean:            1.3750	epsilon:                   0.5000	pi_max:                    0.0683
+q_taken_mean:             -0.0022	return_mean:             -46.2500	return_std:               30.6666	target_mean:             -25.6815
+td_error_abs:             33.8157	test_ep_length_mean:       6.0000	test_return_mean:        -12.0000	test_return_std:           0.0000
+
+[INFO 00:48:09] my_main t_env: 2013 / 100500
+[INFO 00:48:09] my_main Estimated time left: 4 minutes, 19 seconds. Time passed: 5 seconds
+[INFO 00:48:10] my_main Updated target network
+[INFO 00:48:12] my_main Updated target network
+[INFO 00:48:13] my_main Updated target network
+[INFO 00:48:15] my_main Recent Stats | t_env:       4010 | Episode:     3400
+advantage_mean:           -5.5101	agent_grad_norm:          29.2401	coma_loss:               -77.0283	critic_grad_norm:        421.1536
+critic_loss:             201.8136	ep_length_mean:            1.2207	epsilon:                   0.4902	pi_max:                    0.4151
+q_taken_mean:            -37.1990	return_mean:             -26.2585	return_std:               35.0992	target_mean:             -39.1091
+td_error_abs:              8.9934	test_ep_length_mean:       1.0000	test_return_mean:        -20.3750	test_return_std:          29.9935
+
+[INFO 00:48:15] my_main t_env: 4020 / 100500
+[INFO 00:48:15] my_main Estimated time left: 4 minutes, 36 seconds. Time passed: 11 seconds
+[INFO 00:48:15] my_main Updated target network
+[INFO 00:48:16] my_main Updated target network
+[INFO 00:48:18] my_main Updated target network
+[INFO 00:48:19] my_main Updated target network
+[INFO 00:48:20] my_main Recent Stats | t_env:       6015 | Episode:     5168
+advantage_mean:           -1.1181	agent_grad_norm:          34.8075	coma_loss:                -6.1356	critic_grad_norm:        367.8246
+critic_loss:             114.8445	ep_length_mean:            1.1403	epsilon:                   0.4804	pi_max:                    0.9973
+q_taken_mean:            -30.3425	return_mean:             -23.9528	return_std:               32.5589	target_mean:             -30.1384
+td_error_abs:              5.5265	test_ep_length_mean:       1.0000	test_return_mean:        -22.8750	test_return_std:          29.9413
+
+[INFO 00:48:20] my_main t_env: 6024 / 100500
+[INFO 00:48:20] my_main Estimated time left: 4 minutes, 16 seconds. Time passed: 16 seconds
+[INFO 00:48:21] my_main Updated target network
+[INFO 00:48:22] my_main Updated target network
+[INFO 00:48:24] my_main Updated target network
+[INFO 00:48:25] my_main Updated target network
+[INFO 00:48:26] my_main Recent Stats | t_env:       8021 | Episode:     6936
+advantage_mean:            0.2368	agent_grad_norm:          19.6685	coma_loss:               -69.1031	critic_grad_norm:        577.2147
+critic_loss:              94.6526	ep_length_mean:            1.1335	epsilon:                   0.4705	pi_max:                    1.0000
+q_taken_mean:            -35.9238	return_mean:             -24.2212	return_std:               33.0288	target_mean:             -40.1234
+td_error_abs:              5.2237	test_ep_length_mean:       1.0000	test_return_mean:        -21.0000	test_return_std:          30.0000
+
+[INFO 00:48:26] my_main t_env: 8030 / 100500
+[INFO 00:48:26] my_main Estimated time left: 4 minutes, 18 seconds. Time passed: 22 seconds
+[INFO 00:48:27] my_main Updated target network
+[INFO 00:48:29] my_main Updated target network
+[INFO 00:48:31] my_main Updated target network
+[INFO 00:48:32] my_main Recent Stats | t_env:      10023 | Episode:     8720
+advantage_mean:           -2.2376	agent_grad_norm:          29.9448	coma_loss:               -143.2428	critic_grad_norm:         68.9326
+critic_loss:              12.8371	ep_length_mean:            1.1346	epsilon:                   0.4607	pi_max:                    1.0000
+q_taken_mean:            -30.4511	return_mean:             -24.8512	return_std:               32.5573	target_mean:             -30.9205
+td_error_abs:              0.9283	test_ep_length_mean:       1.0000	test_return_mean:        -25.3750	test_return_std:          29.6793
+
+[INFO 00:48:32] my_main t_env: 10031 / 100500
+[INFO 00:48:32] my_main Estimated time left: 4 minutes, 45 seconds. Time passed: 28 seconds
+[INFO 00:48:33] my_main Updated target network
+[INFO 00:48:35] my_main Updated target network
+[INFO 00:48:37] my_main Updated target network
+[INFO 00:48:38] my_main Recent Stats | t_env:      12023 | Episode:    10480
+advantage_mean:           -2.8475	agent_grad_norm:          37.1329	coma_loss:               -295.5430	critic_grad_norm:         64.1289
+critic_loss:              32.0653	ep_length_mean:            1.1216	epsilon:                   0.4509	pi_max:                    1.0000
+q_taken_mean:            -33.9025	return_mean:             -22.4417	return_std:               32.4961	target_mean:             -34.2178
+td_error_abs:              1.1857	test_ep_length_mean:       1.0000	test_return_mean:        -19.1250	test_return_std:          29.9413
+
+[INFO 00:48:38] my_main t_env: 12031 / 100500
+[INFO 00:48:38] my_main Estimated time left: 4 minutes, 26 seconds. Time passed: 34 seconds
+[INFO 00:48:39] my_main Updated target network
+[INFO 00:48:40] my_main Updated target network

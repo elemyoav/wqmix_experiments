@@ -1,0 +1,102 @@
+[INFO 02:39:10] pymarl Running command 'my_main'
+[INFO 02:39:10] pymarl Started run with ID "3"
+[DEBUG 02:39:10] my_main Started
+[INFO 02:39:10] my_main Experiment Parameters:
+[INFO 02:39:10] my_main 
+
+{   'action_selector': 'epsilon_greedy',
+    'agent': 'rnn',
+    'agent_output_type': 'q',
+    'batch_size': 128,
+    'batch_size_run': 8,
+    'buffer_cpu_only': True,
+    'buffer_size': 5000,
+    'central_action_embed': 16,
+    'central_agent': 'central_rnn',
+    'central_loss': 1,
+    'central_mac': 'basic_central_mac',
+    'central_mixer': 'ff',
+    'central_mixing_embed_dim': 256,
+    'central_rnn_hidden_dim': 64,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'double_q': True,
+    'env': 'team_tiger',
+    'env_args': {   'env_args': None,
+                    'map_name': 'team_tiger',
+                    'seed': 503705087},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_embed': 64,
+    'hypernet_layers': 2,
+    'hysteretic_qmix': True,
+    'label': 'default_label',
+    'learner': 'max_q_learner',
+    'learner_log_interval': 2000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.001,
+    'mac': 'basic_mac',
+    'mixer': 'qmix',
+    'mixing_embed_dim': 32,
+    'name': 'ow_qmix_env=8_adam_td_lambda_team_tiger',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'qmix_loss': 1,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'run': 'default',
+    'runner': 'parallel',
+    'runner_log_interval': 2000,
+    'save_model': False,
+    'save_model_interval': 2000000,
+    'save_replay': False,
+    'seed': 503705087,
+    't_max': 10050000,
+    'target_update_interval': 200,
+    'td_lambda': 0.6,
+    'test_greedy': True,
+    'test_interval': 2000,
+    'test_nepisode': 24,
+    'use_cuda': False,
+    'use_tensorboard': False,
+    'w': 0.1}
+
+Mixer Size: 
+142.499K
+[INFO 02:39:10] my_main Beginning training for 10050000 timesteps
+/home/elem/repos/MARL/pymarl/src/components/episode_buffer.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 02:39:10] my_main t_env: 12 / 10050000
+[INFO 02:39:10] my_main Estimated time left: 1 minutes, 6 seconds. Time passed: 0 seconds
+[INFO 02:39:19] my_main Recent Stats | t_env:       2007 | Episode:     1512
+agent_norm:                3.6344	central_loss:            873.7460	ep_length_mean:            1.5000	epsilon:                   1.0000
+grad_norm:               154.4056	loss:                    1088.2034	mixer_norm:               33.4031	q_taken_mean:             -0.1193
+qmix_loss:               214.4574	return_mean:             -19.2500	return_std:               27.0127	target_mean:             -25.0936
+td_error_abs:             32.6984	test_ep_length_mean:       2.0000	test_return_mean:        -33.0000	test_return_std:          28.2843
+w_to_use:                  0.7047	
+[INFO 02:39:19] my_main t_env: 2016 / 10050000
+[INFO 02:39:19] my_main Estimated time left: 12 hours, 32 minutes, 8 seconds. Time passed: 9 seconds
+[INFO 02:39:30] my_main Recent Stats | t_env:       4009 | Episode:     3032
+agent_norm:               94.3253	central_loss:             60.2731	ep_length_mean:            1.3254	epsilon:                   0.9809
+grad_norm:               130.8748	loss:                    243.1438	mixer_norm:               44.1380	q_taken_mean:             -5.2677
+qmix_loss:               182.8707	return_mean:             -29.0040	return_std:               36.6976	target_mean:             -27.8638
+td_error_abs:             27.5482	test_ep_length_mean:       1.0000	test_return_mean:        -30.0000	test_return_std:          59.1608
+w_to_use:                  0.7919	
+[INFO 02:39:30] my_main t_env: 4019 / 10050000
+[INFO 02:39:30] my_main Estimated time left: 15 hours, 8 minutes, 54 seconds. Time passed: 19 seconds
+[INFO 02:39:40] my_main Recent Stats | t_env:       6016 | Episode:     4560
+agent_norm:               48.1412	central_loss:             62.2676	ep_length_mean:            1.3178	epsilon:                   0.9619
+grad_norm:               111.4942	loss:                    266.3385	mixer_norm:               52.7533	q_taken_mean:            -10.4669
+qmix_loss:               204.0709	return_mean:             -28.6204	return_std:               37.7721	target_mean:             -34.2642
+td_error_abs:             28.8145	test_ep_length_mean:       1.0000	test_return_mean:        -40.0000	test_return_std:          60.0000
+w_to_use:                  0.6531	
+[INFO 02:39:41] my_main t_env: 6026 / 10050000
+[INFO 02:39:41] my_main Estimated time left: 14 hours, 29 minutes, 51 seconds. Time passed: 30 seconds

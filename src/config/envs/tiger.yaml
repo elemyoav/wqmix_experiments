@@ -1,0 +1,13 @@
+env: tiger
+
+env_args:
+    map_name: "tiger"
+    env_args:
+
+learner_log_interval: 2000
+log_interval: 2000
+runner_log_interval: 2000
+t_max: 100500
+test_interval: 2000
+test_nepisode: 400
+test_greedy: True

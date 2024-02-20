@@ -1,0 +1,229 @@
+[INFO 21:39:13] pymarl Running command 'my_main'
+[INFO 21:39:13] pymarl Started run with ID "2"
+[DEBUG 21:39:13] my_main Started
+[INFO 21:39:13] my_main Experiment Parameters:
+[INFO 21:39:13] my_main 
+
+{   'action_selector': 'epsilon_greedy',
+    'agent': 'rnn',
+    'agent_output_type': 'q',
+    'batch_size': 128,
+    'batch_size_run': 8,
+    'buffer_cpu_only': True,
+    'buffer_size': 5000,
+    'central_action_embed': 125,
+    'central_agent': 'central_rnn',
+    'central_loss': 1,
+    'central_mac': 'basic_central_mac',
+    'central_mixer': 'ff',
+    'central_mixing_embed_dim': 256,
+    'central_rnn_hidden_dim': 64,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'double_q': True,
+    'env': 'box_pushing',
+    'env_args': {   'env_args': {   'horizon': 100},
+                    'map_name': 'box_pushing',
+                    'seed': 82190616},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_embed': 64,
+    'hypernet_layers': 2,
+    'hysteretic_qmix': True,
+    'label': 'default_label',
+    'learner': 'max_q_learner',
+    'learner_log_interval': 2000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.001,
+    'mac': 'basic_mac',
+    'mixer': 'qmix',
+    'mixing_embed_dim': 32,
+    'name': 'ow_qmix_env=8_adam_td_lambda_box_pushing',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'qmix_loss': 1,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'run': 'default',
+    'runner': 'parallel',
+    'runner_log_interval': 2000,
+    'save_model': False,
+    'save_model_interval': 2000000,
+    'save_replay': False,
+    'seed': 82190616,
+    't_max': 10050000,
+    'target_update_interval': 200,
+    'td_lambda': 0.6,
+    'test_greedy': True,
+    'test_interval': 2000,
+    'test_nepisode': 24,
+    'use_cuda': False,
+    'use_tensorboard': False,
+    'w': 0.1}
+
+Mixer Size: 
+210.115K
+[INFO 21:39:13] my_main Beginning training for 10050000 timesteps
+/home/elem/repos/MARL/pymarl/src/components/episode_buffer.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 21:39:13] my_main t_env: 800 / 10050000
+[INFO 21:39:13] my_main Estimated time left: 14 minutes, 47 seconds. Time passed: 0 seconds
+[INFO 21:39:15] my_main Recent Stats | t_env:       2400 | Episode:       24
+ep_length_mean:          100.0000	epsilon:                   1.0000	return_mean:             -3049.2500	return_std:              248.5316
+test_ep_length_mean:     100.0000	test_return_mean:        -4240.8335	test_return_std:         1130.8622	
+[INFO 21:39:15] my_main t_env: 3200 / 10050000
+[INFO 21:39:15] my_main Estimated time left: 1 hours, 36 minutes, 36 seconds. Time passed: 1 seconds
+[INFO 21:39:16] my_main Recent Stats | t_env:       4800 | Episode:       48
+ep_length_mean:          100.0000	epsilon:                   0.9772	return_mean:             -2924.7083	return_std:              335.9084
+test_ep_length_mean:     100.0000	test_return_mean:        -3880.4167	test_return_std:         1184.2032	
+[INFO 21:39:16] my_main t_env: 5600 / 10050000
+[INFO 21:39:16] my_main Estimated time left: 1 hours, 37 minutes, 13 seconds. Time passed: 3 seconds
+[INFO 21:39:17] my_main Recent Stats | t_env:       7200 | Episode:       72
+ep_length_mean:          100.0000	epsilon:                   0.9544	return_mean:             -3103.9167	return_std:              362.4145
+test_ep_length_mean:     100.0000	test_return_mean:        -3885.0000	test_return_std:         1290.6459	
+[INFO 21:39:18] my_main t_env: 8000 / 10050000
+[INFO 21:39:18] my_main Estimated time left: 1 hours, 37 minutes, 55 seconds. Time passed: 4 seconds
+[INFO 21:39:19] my_main Recent Stats | t_env:       9600 | Episode:       96
+ep_length_mean:          100.0000	epsilon:                   0.9316	return_mean:             -2923.6667	return_std:              250.7332
+test_ep_length_mean:     100.0000	test_return_mean:        -4278.7500	test_return_std:         1134.7258	
+[INFO 21:39:19] my_main t_env: 10400 / 10050000
+[INFO 21:39:19] my_main Estimated time left: 1 hours, 32 minutes, 41 seconds. Time passed: 5 seconds
+[INFO 21:39:20] my_main Recent Stats | t_env:      11994 | Episode:      120
+ep_length_mean:          100.0000	epsilon:                   0.9088	return_mean:             -3017.7500	return_std:              277.1722
+test_ep_length_mean:     100.0000	test_return_mean:        -3658.7500	test_return_std:         1338.6975	
+[INFO 21:39:23] my_main t_env: 12794 / 10050000
+[INFO 21:39:23] my_main Estimated time left: 5 hours, 13 minutes, 39 seconds. Time passed: 10 seconds
+[INFO 21:39:31] my_main Recent Stats | t_env:      14394 | Episode:      144
+agent_norm:                5.1299	central_loss:            4135.8979	ep_length_mean:           99.7500	epsilon:                   0.8861
+grad_norm:               318.2174	loss:                    6631.3281	mixer_norm:               28.9610	q_taken_mean:             -0.0741
+qmix_loss:               2495.4304	return_mean:             -2806.7083	return_std:              581.3812	target_mean:             -36.0142
+td_error_abs:             81.1932	test_ep_length_mean:     100.0000	test_return_mean:        -4470.4165	test_return_std:         1625.4729
+w_to_use:                  0.1211	
+Process Process-4:
+Process Process-6:
+Process Process-7:
+Process Process-8:
+Process Process-5:
+Process Process-3:
+Process Process-2:
+Process Process-1:
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+Traceback (most recent call last):
+  File "/home/elem/repos/MARL/pymarl/src/runners/parallel_runner.py", line 252, in env_worker
+    values = remote.recv()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/elem/repos/MARL/pymarl/src/runners/parallel_runner.py", line 252, in env_worker
+    values = remote.recv()
+  File "/home/elem/repos/MARL/pymarl/src/runners/parallel_runner.py", line 252, in env_worker
+    values = remote.recv()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+KeyboardInterrupt
+  File "/home/elem/repos/MARL/pymarl/src/runners/parallel_runner.py", line 252, in env_worker
+    values = remote.recv()
+KeyboardInterrupt
+KeyboardInterrupt
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/elem/repos/MARL/pymarl/src/runners/parallel_runner.py", line 252, in env_worker
+    values = remote.recv()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/elem/repos/MARL/pymarl/src/runners/parallel_runner.py", line 252, in env_worker
+    values = remote.recv()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/elem/repos/MARL/pymarl/src/runners/parallel_runner.py", line 252, in env_worker
+    values = remote.recv()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/elem/repos/MARL/pymarl/src/runners/parallel_runner.py", line 252, in env_worker
+    values = remote.recv()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 250, in recv
+    buf = self._recv_bytes()
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/home/elem/anaconda3/envs/pymarl/lib/python3.7/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt

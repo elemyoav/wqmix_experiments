@@ -1,0 +1,105 @@
+[INFO 01:03:32] pymarl Running command 'my_main'
+[INFO 01:03:32] pymarl Started run with ID "2"
+[DEBUG 01:03:32] my_main Started
+[INFO 01:03:32] my_main Experiment Parameters:
+[INFO 01:03:32] my_main 
+
+{   'action_selector': 'gumbel',
+    'agent': 'rnn',
+    'agent_output_type': 'pi_logits',
+    'batch_size': 32,
+    'batch_size_run': 8,
+    'buffer_cpu_only': True,
+    'buffer_size': 128,
+    'checkpoint_path': '',
+    'critic': 'lica',
+    'critic_lr': 0.0005,
+    'critics_update_num': 1,
+    'entropy_coef': 0.06,
+    'env': 'team_tiger',
+    'env_args': {   'env_args': None,
+                    'map_name': 'team_tiger',
+                    'seed': 123642843},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.0,
+    'epsilon_start': 0.0,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_embed_dim': 64,
+    'hypernet_layers': 2,
+    'label': 'default_label',
+    'learner': 'lica_learner',
+    'learner_log_interval': 2000,
+    'lica_mixing_embed_dim': 64,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.0005,
+    'mac': 'lica_mac',
+    'mask_before_softmax': True,
+    'name': 'lica_env=8_adam_td_lambda',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'run': 'default',
+    'runner': 'parallel',
+    'runner_log_interval': 2000,
+    'save_model': False,
+    'save_model_interval': 2000000,
+    'save_replay': False,
+    'seed': 123642843,
+    't_max': 10050000,
+    'target_update_interval': 200,
+    'td_lambda': 0.6,
+    'test_greedy': True,
+    'test_interval': 2000,
+    'test_nepisode': 96,
+    'use_cuda': False,
+    'use_tensorboard': False}
+
+Mixer Size: 
+71.553K
+[INFO 01:03:32] my_main Beginning training for 10050000 timesteps
+/home/elem/repos/MARL/pymarl/src/components/episode_buffer.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 01:03:32] my_main t_env: 9 / 10050000
+[INFO 01:03:32] my_main Estimated time left: 55 seconds. Time passed: 0 seconds
+[INFO 01:03:37] my_main Recent Stats | t_env:       2000 | Episode:     1800
+agent_grad_norm:           0.0691	critic_grad_norm:        314.0434	critic_loss:             1334.3595	entropy:                   2.7697
+ep_length_mean:            1.1250	epsilon:                   0.0000	mix_loss:                  1.0977	q_t_mean:                 -1.0280
+return_mean:             -24.6250	return_std:               39.6262	target_mean:             -17.1185	td_error_abs:             25.7590
+test_ep_length_mean:       1.0000	test_return_mean:        -40.0000	test_return_std:           0.0000	
+[INFO 01:03:37] my_main t_env: 2016 / 10050000
+[INFO 01:03:37] my_main Estimated time left: 6 hours, 57 minutes, 4 seconds. Time passed: 5 seconds
+[INFO 01:03:41] my_main Recent Stats | t_env:       4002 | Episode:     3800
+agent_grad_norm:           6.1991	critic_grad_norm:        149.3039	critic_loss:              85.6067	entropy:                   1.3500
+ep_length_mean:            1.1101	epsilon:                   0.0000	mix_loss:                 16.7961	q_t_mean:                -18.3850
+return_mean:             -24.7146	return_std:               34.2715	target_mean:             -18.4375	td_error_abs:              2.7269
+test_ep_length_mean:       1.0000	test_return_mean:        -21.0000	test_return_std:          30.0000	
+[INFO 01:03:41] my_main t_env: 4018 / 10050000
+[INFO 01:03:41] my_main Estimated time left: 6 hours, 35 minutes, 54 seconds. Time passed: 9 seconds
+[INFO 01:03:46] my_main Recent Stats | t_env:       6002 | Episode:     5800
+agent_grad_norm:           7.8672	critic_grad_norm:         23.7282	critic_loss:               8.5108	entropy:                   1.6517
+ep_length_mean:            1.0010	epsilon:                   0.0000	mix_loss:                 15.9479	q_t_mean:                -21.1756
+return_mean:             -20.8325	return_std:               30.2472	target_mean:             -20.6562	td_error_abs:              0.5455
+test_ep_length_mean:       1.0000	test_return_mean:        -16.0000	test_return_std:          29.5804	
+[INFO 01:03:46] my_main t_env: 6018 / 10050000
+[INFO 01:03:46] my_main Estimated time left: 6 hours, 41 minutes, 30 seconds. Time passed: 14 seconds
+[INFO 01:03:51] my_main Recent Stats | t_env:       8002 | Episode:     7800
+agent_grad_norm:          11.0581	critic_grad_norm:          0.0630	critic_loss:               0.0000	entropy:                   1.7615
+ep_length_mean:            1.0000	epsilon:                   0.0000	mix_loss:                 18.9058	q_t_mean:                -17.2494
+return_mean:             -20.1000	return_std:               29.9865	target_mean:             -17.2500	td_error_abs:              0.0016
+test_ep_length_mean:       1.0000	test_return_mean:        -20.3750	test_return_std:          29.9935	
+[INFO 01:03:51] my_main t_env: 8018 / 10050000
+[INFO 01:03:51] my_main Estimated time left: 6 hours, 47 minutes, 15 seconds. Time passed: 19 seconds
+[INFO 01:03:57] my_main Recent Stats | t_env:      10002 | Episode:     9800
+agent_grad_norm:           0.4497	critic_grad_norm:          1.9339	critic_loss:               0.0110	entropy:                   1.7848
+ep_length_mean:            1.0000	epsilon:                   0.0000	mix_loss:                 16.3615	q_t_mean:                -21.0049
+return_mean:             -21.5290	return_std:               30.0463	target_mean:             -21.0000	td_error_abs:              0.0514
+test_ep_length_mean:       1.0000	test_return_mean:        -19.1250	test_return_std:          29.9413	
+[INFO 01:03:57] my_main t_env: 10018 / 10050000
+[INFO 01:03:57] my_main Estimated time left: 7 hours, 43 minutes, 0 seconds. Time passed: 24 seconds

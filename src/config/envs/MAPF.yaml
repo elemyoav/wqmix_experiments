@@ -1,0 +1,16 @@
+
+env: "MAPF"
+
+env_args:
+    map_name: "test"
+    n_agents: 2
+
+
+test_greedy: True
+test_nepisode: 100
+test_interval: 50000
+log_interval: 50000
+runner_log_interval: 10000
+learner_log_interval: 10000
+t_max: 20500000
+obs_agent_id: False

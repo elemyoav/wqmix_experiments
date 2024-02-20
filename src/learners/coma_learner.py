@@ -2,8 +2,9 @@ import copy
 from components.episode_buffer import EpisodeBatch
 from modules.critics.coma import COMACritic
 from utils.rl_utils import build_td_lambda_targets
+from torch.distributions import Categorical
 import torch as th
-from torch.optim import RMSprop
+from torch.optim import Adam
 
 
 class COMALearner:
@@ -26,8 +27,8 @@ class COMALearner:
         self.critic_params = list(self.critic.parameters())
         self.params = self.agent_params + self.critic_params
 
-        self.agent_optimiser = RMSprop(params=self.agent_params, lr=args.lr, alpha=args.optim_alpha, eps=args.optim_eps)
-        self.critic_optimiser = RMSprop(params=self.critic_params, lr=args.critic_lr, alpha=args.optim_alpha, eps=args.optim_eps)
+        self.agent_optimiser = Adam(params=self.agent_params, lr=args.lr)
+        self.critic_optimiser = Adam(params=self.critic_params, lr=args.critic_lr)
 
     def train(self, batch: EpisodeBatch, t_env: int, episode_num: int):
         # Get the relevant quantities
@@ -75,10 +76,15 @@ class COMALearner:
         advantages = (q_taken - baseline).detach()
 
         coma_loss = - ((advantages * log_pi_taken) * mask).sum() / mask.sum()
+        
+        dist_entropy = Categorical(pi).entropy().view(-1)
+        dist_entropy[mask == 0] = 0 # fill nan
+        entropy_loss = (dist_entropy * mask).sum() / mask.sum()
 
         # Optimise agents
         self.agent_optimiser.zero_grad()
-        coma_loss.backward()
+        loss = coma_loss - self.args.entropy * entropy_loss
+        loss.backward()
         grad_norm = th.nn.utils.clip_grad_norm_(self.agent_params, self.args.grad_norm_clip)
         self.agent_optimiser.step()
 

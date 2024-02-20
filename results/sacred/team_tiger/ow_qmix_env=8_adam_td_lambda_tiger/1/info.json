@@ -1,0 +1,104 @@
+{
+  "agent_norm": [
+    1.5047697780178917
+  ],
+  "agent_norm_T": [
+    168
+  ],
+  "central_loss": [
+    898.042236328125
+  ],
+  "central_loss_T": [
+    168
+  ],
+  "ep_length_mean": [
+    1.875
+  ],
+  "ep_length_mean_T": [
+    15
+  ],
+  "epsilon": [
+    1.0
+  ],
+  "epsilon_T": [
+    15
+  ],
+  "grad_norm": [
+    129.7476246012604
+  ],
+  "grad_norm_T": [
+    168
+  ],
+  "loss": [
+    1129.1123046875
+  ],
+  "loss_T": [
+    168
+  ],
+  "mixer_norm": [
+    21.797837605079607
+  ],
+  "mixer_norm_T": [
+    168
+  ],
+  "q_taken_mean": [
+    -0.021894545782180058
+  ],
+  "q_taken_mean_T": [
+    168
+  ],
+  "qmix_loss": [
+    231.07008361816406
+  ],
+  "qmix_loss_T": [
+    168
+  ],
+  "return_mean": [
+    -17.25
+  ],
+  "return_mean_T": [
+    15
+  ],
+  "return_std": [
+    41.21210380458634
+  ],
+  "return_std_T": [
+    15
+  ],
+  "target_mean": [
+    -23.669080461774552
+  ],
+  "target_mean_T": [
+    168
+  ],
+  "td_error_abs": [
+    32.43876429966518
+  ],
+  "td_error_abs_T": [
+    168
+  ],
+  "test_ep_length_mean": [
+    6.0
+  ],
+  "test_ep_length_mean_T": [
+    15
+  ],
+  "test_return_mean": [
+    -12.0
+  ],
+  "test_return_mean_T": [
+    15
+  ],
+  "test_return_std": [
+    0.0
+  ],
+  "test_return_std_T": [
+    15
+  ],
+  "w_to_use": [
+    0.738085925579071
+  ],
+  "w_to_use_T": [
+    168
+  ]
+}

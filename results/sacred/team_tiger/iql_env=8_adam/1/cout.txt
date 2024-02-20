@@ -1,0 +1,203 @@
+[INFO 00:53:06] pymarl Running command 'my_main'
+[INFO 00:53:06] pymarl Started run with ID "1"
+[DEBUG 00:53:06] my_main Started
+[INFO 00:53:06] my_main Experiment Parameters:
+[INFO 00:53:06] my_main 
+
+{   'action_selector': 'epsilon_greedy',
+    'agent': 'rnn',
+    'agent_output_type': 'q',
+    'batch_size': 32,
+    'batch_size_run': 8,
+    'buffer_cpu_only': True,
+    'buffer_size': 5000,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'double_q': True,
+    'env': 'team_tiger',
+    'env_args': {   'env_args': None,
+                    'map_name': 'team_tiger',
+                    'seed': 21857446},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'label': 'default_label',
+    'learner': 'q_learner',
+    'learner_log_interval': 2000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.0005,
+    'mac': 'basic_mac',
+    'mixer': None,
+    'name': 'iql_env=8_adam',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'optimizer': 'adam',
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'run': 'default',
+    'runner': 'parallel',
+    'runner_log_interval': 2000,
+    'save_model': False,
+    'save_model_interval': 2000000,
+    'save_replay': False,
+    'seed': 21857446,
+    't_max': 10050000,
+    'target_update_interval': 200,
+    'test_greedy': True,
+    'test_interval': 2000,
+    'test_nepisode': 96,
+    'use_cuda': False,
+    'use_tensorboard': False}
+
+[INFO 00:53:06] my_main Beginning training for 10050000 timesteps
+/home/elem/repos/MARL/pymarl/src/components/episode_buffer.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 00:53:06] my_main t_env: 16 / 10050000
+[INFO 00:53:06] my_main Estimated time left: 1 minutes, 13 seconds. Time passed: 0 seconds
+[INFO 00:53:13] my_main Recent Stats | t_env:       2003 | Episode:     1496
+ep_length_mean:            2.0000	epsilon:                   1.0000	grad_norm:                 8.8456	loss_td:                 507.6127
+q_taken_mean:             -0.0390	return_mean:             -23.6250	return_std:               33.1245	target_mean:             -15.3737
+td_error_abs:             22.6815	test_ep_length_mean:       1.0000	test_return_mean:        -22.8750	test_return_std:          29.9413
+
+[INFO 00:53:13] my_main t_env: 2021 / 10050000
+[INFO 00:53:13] my_main Estimated time left: 8 hours, 33 minutes, 25 seconds. Time passed: 6 seconds
+[INFO 00:53:17] my_main Recent Stats | t_env:       4006 | Episode:     3056
+ep_length_mean:            1.3331	epsilon:                   0.9809	grad_norm:                55.8263	loss_td:                 692.5081
+q_taken_mean:             -3.4317	return_mean:             -26.8145	return_std:               35.5635	target_mean:             -20.8814
+td_error_abs:             28.9338	test_ep_length_mean:       1.0000	test_return_mean:        -16.0000	test_return_std:          29.5804
+
+[INFO 00:53:17] my_main t_env: 4031 / 10050000
+[INFO 00:53:17] my_main Estimated time left: 5 hours, 37 minutes, 58 seconds. Time passed: 10 seconds
+[INFO 00:53:20] my_main Recent Stats | t_env:       6016 | Episode:     4568
+ep_length_mean:            1.2885	epsilon:                   0.9618	grad_norm:                53.9271	loss_td:                 579.8930
+q_taken_mean:             -9.5756	return_mean:             -28.1276	return_std:               35.6774	target_mean:             -24.3348
+td_error_abs:             26.6584	test_ep_length_mean:       1.0000	test_return_mean:        -20.3750	test_return_std:          29.9935
+
+[INFO 00:53:21] my_main t_env: 6032 / 10050000
+[INFO 00:53:21] my_main Estimated time left: 5 hours, 24 minutes, 50 seconds. Time passed: 14 seconds
+[INFO 00:53:24] my_main Recent Stats | t_env:       8017 | Episode:     6128
+ep_length_mean:            1.3234	epsilon:                   0.9428	grad_norm:                75.4477	loss_td:                 866.9376
+q_taken_mean:            -13.4216	return_mean:             -26.4206	return_std:               35.4115	target_mean:             -33.9880
+td_error_abs:             30.6322	test_ep_length_mean:       1.0000	test_return_mean:        -16.6250	test_return_std:          29.6793
+
+[INFO 00:53:24] my_main t_env: 8038 / 10050000
+[INFO 00:53:24] my_main Estimated time left: 5 hours, 23 minutes, 11 seconds. Time passed: 17 seconds
+[INFO 00:53:28] my_main Recent Stats | t_env:      10028 | Episode:     7696
+ep_length_mean:            1.2859	epsilon:                   0.9237	grad_norm:                30.7448	loss_td:                 355.5904
+q_taken_mean:            -16.1662	return_mean:             -27.5282	return_std:               35.3917	target_mean:             -21.5883
+td_error_abs:             23.6828	test_ep_length_mean:       1.0000	test_return_mean:        -27.8750	test_return_std:          29.2016
+
+[INFO 00:53:28] my_main t_env: 10038 / 10050000
+[INFO 00:53:28] my_main Estimated time left: 5 hours, 41 minutes, 10 seconds. Time passed: 22 seconds
+[INFO 00:53:32] my_main Recent Stats | t_env:      12033 | Episode:     9256
+ep_length_mean:            1.2821	epsilon:                   0.9047	grad_norm:                47.6327	loss_td:                 486.3706
+q_taken_mean:            -19.0955	return_mean:             -26.2718	return_std:               34.8815	target_mean:             -27.0933
+td_error_abs:             25.5438	test_ep_length_mean:       1.0000	test_return_mean:        -16.6250	test_return_std:          29.6793
+
+[INFO 00:53:32] my_main t_env: 12042 / 10050000
+[INFO 00:53:32] my_main Estimated time left: 5 hours, 26 minutes, 52 seconds. Time passed: 25 seconds
+[INFO 00:53:36] my_main Recent Stats | t_env:      14040 | Episode:    10856
+ep_length_mean:            1.2846	epsilon:                   0.8857	grad_norm:                24.4499	loss_td:                 391.1113
+q_taken_mean:            -20.1988	return_mean:             -28.5596	return_std:               36.2596	target_mean:             -26.5048
+td_error_abs:             22.2495	test_ep_length_mean:       1.0000	test_return_mean:        -17.8750	test_return_std:          29.8368
+
+[INFO 00:53:36] my_main t_env: 14048 / 10050000
+[INFO 00:53:36] my_main Estimated time left: 5 hours, 33 minutes, 1 seconds. Time passed: 29 seconds
+[INFO 00:53:40] my_main Recent Stats | t_env:      16041 | Episode:    12432
+ep_length_mean:            1.2537	epsilon:                   0.8666	grad_norm:                37.9460	loss_td:                 356.0740
+q_taken_mean:            -21.6447	return_mean:             -26.8844	return_std:               35.1926	target_mean:             -13.8457
+td_error_abs:             22.4053	test_ep_length_mean:       1.0000	test_return_mean:        -19.1250	test_return_std:          29.9413
+
+[INFO 00:53:40] my_main t_env: 16049 / 10050000
+[INFO 00:53:40] my_main Estimated time left: 5 hours, 39 minutes, 22 seconds. Time passed: 34 seconds
+[INFO 00:53:44] my_main Recent Stats | t_env:      18047 | Episode:    14008
+ep_length_mean:            1.2697	epsilon:                   0.8476	grad_norm:                88.9783	loss_td:                 697.4862
+q_taken_mean:            -23.7341	return_mean:             -27.1516	return_std:               35.6245	target_mean:             -43.9592
+td_error_abs:             29.7446	test_ep_length_mean:       1.0000	test_return_mean:        -23.5000	test_return_std:          29.8957
+
+[INFO 00:53:44] my_main t_env: 18056 / 10050000
+[INFO 00:53:44] my_main Estimated time left: 5 hours, 18 minutes, 50 seconds. Time passed: 37 seconds
+[INFO 00:53:48] my_main Recent Stats | t_env:      20049 | Episode:    15584
+ep_length_mean:            1.2735	epsilon:                   0.8286	grad_norm:                38.9249	loss_td:                 394.4681
+q_taken_mean:            -24.0445	return_mean:             -26.3756	return_std:               34.7099	target_mean:             -22.1125
+td_error_abs:             20.8682	test_ep_length_mean:       1.0000	test_return_mean:        -18.5000	test_return_std:          29.8957
+
+[INFO 00:53:48] my_main t_env: 20057 / 10050000
+[INFO 00:53:48] my_main Estimated time left: 5 hours, 43 minutes, 49 seconds. Time passed: 41 seconds
+[INFO 00:53:53] my_main Recent Stats | t_env:      22052 | Episode:    17168
+ep_length_mean:            1.2697	epsilon:                   0.8095	grad_norm:                36.2668	loss_td:                 494.2462
+q_taken_mean:            -24.1958	return_mean:             -26.1980	return_std:               34.8704	target_mean:             -21.0150
+td_error_abs:             24.1551	test_ep_length_mean:       1.0000	test_return_mean:        -20.3750	test_return_std:          29.9935
+
+[INFO 00:53:53] my_main t_env: 22063 / 10050000
+[INFO 00:53:53] my_main Estimated time left: 6 hours, 3 minutes, 26 seconds. Time passed: 46 seconds
+[INFO 00:53:57] my_main Recent Stats | t_env:      24058 | Episode:    18720
+ep_length_mean:            1.2664	epsilon:                   0.7905	grad_norm:                36.4304	loss_td:                 489.5054
+q_taken_mean:            -22.9510	return_mean:             -27.6932	return_std:               34.8537	target_mean:             -26.5432
+td_error_abs:             25.5572	test_ep_length_mean:       1.0000	test_return_mean:        -19.1250	test_return_std:          29.9413
+
+[INFO 00:53:57] my_main t_env: 24069 / 10050000
+[INFO 00:53:57] my_main Estimated time left: 5 hours, 58 minutes, 27 seconds. Time passed: 50 seconds
+[INFO 00:54:01] my_main Recent Stats | t_env:      26064 | Episode:    20352
+ep_length_mean:            1.2925	epsilon:                   0.7714	grad_norm:                31.4959	loss_td:                 384.6661
+q_taken_mean:            -24.6418	return_mean:             -25.6372	return_std:               34.5528	target_mean:             -23.1665
+td_error_abs:             21.6364	test_ep_length_mean:       1.0000	test_return_mean:        -19.7500	test_return_std:          29.9739
+
+[INFO 00:54:01] my_main t_env: 26072 / 10050000
+[INFO 00:54:01] my_main Estimated time left: 6 hours, 10 minutes, 1 seconds. Time passed: 55 seconds
+[INFO 00:54:06] my_main Recent Stats | t_env:      28064 | Episode:    21984
+ep_length_mean:            1.2273	epsilon:                   0.7524	grad_norm:                27.0403	loss_td:                 371.1540
+q_taken_mean:            -23.5180	return_mean:             -25.5000	return_std:               34.8980	target_mean:             -19.5047
+td_error_abs:             20.9849	test_ep_length_mean:       1.0000	test_return_mean:        -22.8750	test_return_std:          29.9413
+
+[INFO 00:54:06] my_main t_env: 28073 / 10050000
+[INFO 00:54:06] my_main Estimated time left: 6 hours, 2 minutes, 14 seconds. Time passed: 59 seconds
+[INFO 00:54:10] my_main Recent Stats | t_env:      30069 | Episode:    23632
+ep_length_mean:            1.2261	epsilon:                   0.7334	grad_norm:                39.6648	loss_td:                 514.6582
+q_taken_mean:            -24.9261	return_mean:             -26.0331	return_std:               34.7867	target_mean:             -26.7554
+td_error_abs:             26.7560	test_ep_length_mean:       1.0000	test_return_mean:        -24.1250	test_return_std:          29.8368
+
+[INFO 00:54:10] my_main t_env: 30077 / 10050000
+[INFO 00:54:10] my_main Estimated time left: 6 hours, 16 minutes, 39 seconds. Time passed: 1 minutes, 3 seconds
+[INFO 00:54:15] my_main t_env: 32080 / 10050000
+[INFO 00:54:15] my_main Estimated time left: 5 hours, 52 minutes, 22 seconds. Time passed: 1 minutes, 8 seconds
+[INFO 00:54:15] my_main Recent Stats | t_env:      32080 | Episode:    25272
+ep_length_mean:            1.2217	epsilon:                   0.6954	grad_norm:                22.1753	loss_td:                 388.6694
+q_taken_mean:            -25.2571	return_mean:             -24.3890	return_std:               33.7545	target_mean:             -25.2490
+td_error_abs:             20.3276	test_ep_length_mean:       1.0000	test_return_mean:        -23.1875	test_return_std:          29.7869
+
+[INFO 00:54:19] my_main t_env: 34089 / 10050000
+[INFO 00:54:19] my_main Estimated time left: 6 hours, 10 minutes, 46 seconds. Time passed: 1 minutes, 12 seconds
+[INFO 00:54:19] my_main Recent Stats | t_env:      34089 | Episode:    26936
+ep_length_mean:            1.2073	epsilon:                   0.6763	grad_norm:                36.4877	loss_td:                 581.2681
+q_taken_mean:            -23.2985	return_mean:             -24.1292	return_std:               33.5123	target_mean:             -17.4247
+td_error_abs:             30.6731	test_ep_length_mean:       1.0000	test_return_mean:        -22.8750	test_return_std:          29.9413
+
+[INFO 00:54:24] my_main t_env: 36095 / 10050000
+[INFO 00:54:24] my_main Estimated time left: 6 hours, 32 minutes, 10 seconds. Time passed: 1 minutes, 17 seconds
+[INFO 00:54:24] my_main Recent Stats | t_env:      36095 | Episode:    28632
+ep_length_mean:            1.1828	epsilon:                   0.6572	grad_norm:                32.7195	loss_td:                 521.5148
+q_taken_mean:            -25.1051	return_mean:             -26.2465	return_std:               33.3813	target_mean:             -21.5986
+td_error_abs:             26.7510	test_ep_length_mean:       1.0000	test_return_mean:        -21.0000	test_return_std:          30.0000
+
+[INFO 00:54:28] my_main t_env: 38098 / 10050000
+[INFO 00:54:28] my_main Estimated time left: 6 hours, 7 minutes, 22 seconds. Time passed: 1 minutes, 21 seconds
+[INFO 00:54:28] my_main Recent Stats | t_env:      38098 | Episode:    30312
+ep_length_mean:            1.1923	epsilon:                   0.6382	grad_norm:                29.9605	loss_td:                 325.5829
+q_taken_mean:            -21.1182	return_mean:             -25.0500	return_std:               33.3958	target_mean:             -25.1086
+td_error_abs:             21.6621	test_ep_length_mean:       1.0000	test_return_mean:        -20.3750	test_return_std:          29.9935
+
+[INFO 00:54:32] my_main t_env: 40104 / 10050000
+[INFO 00:54:32] my_main Estimated time left: 5 hours, 44 minutes, 22 seconds. Time passed: 1 minutes, 25 seconds
+[INFO 00:54:32] my_main Recent Stats | t_env:      40104 | Episode:    32000
+ep_length_mean:            1.1884	epsilon:                   0.6191	grad_norm:                32.3918	loss_td:                 507.6797
+q_taken_mean:            -22.8738	return_mean:             -24.5741	return_std:               33.3461	target_mean:             -22.8048
+td_error_abs:             27.5901	test_ep_length_mean:       1.0000	test_return_mean:        -21.0000	test_return_std:          30.0000
+

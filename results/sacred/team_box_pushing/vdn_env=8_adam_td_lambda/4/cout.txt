@@ -1,0 +1,338 @@
+[INFO 17:00:52] pymarl Running command 'my_main'
+[INFO 17:00:52] pymarl Started run with ID "4"
+[DEBUG 17:00:52] my_main Started
+[INFO 17:00:52] my_main Experiment Parameters:
+[INFO 17:00:52] my_main 
+
+{   'action_selector': 'epsilon_greedy',
+    'agent': 'n_rnn',
+    'agent_output_type': 'q',
+    'batch_size': 128,
+    'batch_size_run': 8,
+    'buffer_cpu_only': True,
+    'buffer_size': 5000,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'env': 'team_box_pushing',
+    'env_args': {   'env_args': {   'horizon': 30},
+                    'map_name': 'team_box_pushing',
+                    'seed': 746525910},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_embed': 64,
+    'label': 'default_label',
+    'learner': 'nq_learner',
+    'learner_log_interval': 2000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.001,
+    'mac': 'n_mac',
+    'mixer': 'vdn',
+    'mixing_embed_dim': 32,
+    'name': 'vdn_env=8_adam_td_lambda',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'optimizer': 'adam',
+    'q_lambda': False,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'run': 'default',
+    'runner': 'parallel',
+    'runner_log_interval': 2000,
+    'save_model': False,
+    'save_model_interval': 2000000,
+    'save_replay': False,
+    'seed': 746525910,
+    't_max': 10050000,
+    'target_update_interval': 200,
+    'td_lambda': 0.6,
+    'test_greedy': True,
+    'test_interval': 2000,
+    'test_nepisode': 24,
+    'use_cuda': False,
+    'use_tensorboard': False}
+
+Mixer Size: 
+0.0K
+[INFO 17:00:52] my_main Beginning training for 10050000 timesteps
+/home/elem/repos/MARL/pymarl/src/components/episode_buffer.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+pid 3658830
+step 0
+actions [2, 10]
+pid 3658831
+step 0
+pid 3658832
+actions [0, 6]
+step 0
+actions [2, 1]
+pid 3658834
+step 0
+actions [14, 6]
+pid 3658836
+step 0
+actions [4, 10]
+pid 3658835
+step 0
+actions [10, 9]
+pid 3658833
+step 0
+actions [5, 1]
+pid 3658837
+step 0
+actions [10, 8]
+pid 3658830
+step 1
+actions [10, 1]
+pid 3658831
+step 1
+actions [1, 12]
+pid 3658832
+step 1
+actions [11, 3]
+pid 3658836
+step 1
+actions [12, 14]
+pid 3658834
+step 1
+actions [6, 11]
+pid 3658833
+step 1
+actions [7, 14]
+pid 3658835
+step 1
+actions [14, 13]
+pid 3658837
+step 1
+actions [6, 1]
+pid 3658830
+step 2
+actions [5, 9]
+pid 3658831
+step 2
+actions [2, 12]
+pid 3658832
+step 2
+actions [2, 8]
+pid 3658834
+pid 3658835
+step 2
+step 2
+actions [8, 7]
+actions [9, 7]
+pid 3658836
+step 2
+actions [0, 0]
+pid 3658837
+step 2
+actions [3, 11]
+pid 3658833
+step 2
+actions [13, 2]
+pid 3658830
+step 3
+actions [4, 1]
+pid 3658831
+step 3
+actions [10, 12]
+pid 3658832
+step 3
+actions [10, 4]
+pid 3658833
+pid 3658834
+step 3
+actions [3, 5]
+step 3
+actions [10, 2]
+pid 3658835
+pid 3658836
+step 3
+step 3
+actions [1, 11]
+actions [12, 12]
+pid 3658837
+step 3
+actions [9, 0]
+pid 3658830
+pid 3658831
+step 4
+step 4
+actions [3, 7]
+actions [8, 12]
+pid 3658832
+step 4
+actions [8, 0]
+pid 3658833
+step 4
+actions [2, 14]
+pid 3658834
+step 4
+actions [11, 12]
+pid 3658835
+step 4
+actions [9, 8]
+pid 3658836
+step 4
+actions [4, 8]
+pid 3658837
+step 4
+actions [10, 2]
+pid 3658830
+step 5
+actions [3, 9]
+pid 3658831
+step 5
+actions [5, 4]
+pid 3658832
+step 5
+actions [6, 11]
+pid 3658834
+step 5
+actions [8, 6]
+pid 3658833
+step 5
+actions [10, 8]
+pid 3658835
+step 5
+actions [9, 9]
+pid 3658836
+step 5
+actions [3, 14]
+pid 3658837
+step 5
+actions [11, 1]
+pid 3658830
+step 6
+actions [3, 14]
+pid 3658831
+step 6
+actions [7, 10]
+pid 3658832
+step 6
+actions [1, 9]
+pid 3658834
+pid 3658833
+step 6
+step 6
+actions [11, 8]
+actions [3, 11]
+pid 3658835
+step 6
+actions [10, 14]
+pid 3658836
+step 6
+actions [13, 8]
+pid 3658837
+step 6
+actions [0, 10]
+pid 3658831
+step 7
+actions [14, 11]
+pid 3658832
+step 7
+actions [6, 14]
+pid 3658830
+step 7
+actions [2, 11]
+pid 3658834
+step 7
+actions [9, 11]
+pid 3658833
+step 7
+actions [1, 13]
+pid 3658835
+step 7
+actions [11, 3]
+pid 3658836
+step 7
+actions [5, 0]
+pid 3658837
+step 7
+actions [4, 2]
+pid 3658830
+step 8
+actions [14, 7]
+pid 3658831
+step 8
+actions [4, 12]
+pid 3658832
+step 8
+actions [12, 11]
+pid 3658833
+step 8
+actions [9, 0]
+pid 3658834
+step 8
+actions [6, 9]
+pid 3658835
+step 8
+actions [12, 3]
+pid 3658836
+step 8
+actions [6, 13]
+pid 3658837
+step 8
+actions [10, 3]
+pid 3658830
+step 9
+actions [2, 13]
+pid 3658831
+step 9
+actions [3, 4]
+pid 3658832
+step 9
+actions [10, 14]
+pid 3658833
+step 9
+actions [8, 6]
+pid 3658834
+step 9
+actions [9, 10]
+pid 3658835
+step 9
+actions [0, 1]
+pid 3658836
+step 9
+actions [14, 6]
+pid 3658837
+step 9
+actions [12, 4]
+None
+None
+None
+None
+pid 3658830
+pid 3658831
+step 10
+step 10
+actions [9, 1]
+actions [11, 7]
+pid 3658832
+step 10
+actions [4, 5]
+pid 3658836
+step 10
+actions [2, 8]
+None
+None
+None
+None
+pid 3658834
+step 10
+actions [13, 0]
+pid 3658835
+pid 3658833
+step 10
+step 10
+actions [8, 4]
+actions [8, 2]
+pid 3658837
+step 10
+actions [2, 3]

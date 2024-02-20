@@ -1,0 +1,1083 @@
+[INFO 16:46:49] pymarl Running command 'my_main'
+[INFO 16:46:49] pymarl Started run with ID "11"
+[DEBUG 16:46:49] my_main Started
+[INFO 16:46:49] my_main Experiment Parameters:
+[INFO 16:46:49] my_main 
+
+{   'action_selector': 'epsilon_greedy',
+    'agent': 'rnn',
+    'agent_output_type': 'q',
+    'batch_size': 128,
+    'batch_size_run': 8,
+    'buffer_cpu_only': True,
+    'buffer_size': 5000,
+    'central_action_embed': 256,
+    'central_agent': 'central_rnn',
+    'central_loss': 1,
+    'central_mac': 'basic_central_mac',
+    'central_mixer': 'ff',
+    'central_mixing_embed_dim': 256,
+    'central_rnn_hidden_dim': 256,
+    'checkpoint_path': '',
+    'critic_lr': 0.0005,
+    'double_q': True,
+    'env': 'team_box_pushing',
+    'env_args': {   'env_args': {   'horizon': 30},
+                    'map_name': 'team_box_pushing',
+                    'seed': 973396684},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.05,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_embed': 256,
+    'hypernet_layers': 2,
+    'hysteretic_qmix': True,
+    'label': 'default_label',
+    'learner': 'max_q_learner',
+    'learner_log_interval': 2000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.001,
+    'mac': 'basic_mac',
+    'mixer': 'qmix',
+    'mixing_embed_dim': 128,
+    'name': 'ow_qmix_env=8_adam_td_lambda_team_box_pushing',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'qmix_loss': 1,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'run': 'default',
+    'runner': 'parallel',
+    'runner_log_interval': 2000,
+    'save_model': False,
+    'save_model_interval': 2000000,
+    'save_replay': False,
+    'seed': 973396684,
+    't_max': 10050000,
+    'target_update_interval': 2000,
+    'td_lambda': 0.6,
+    'test_greedy': True,
+    'test_interval': 2000,
+    'test_nepisode': 24,
+    'use_cuda': False,
+    'use_tensorboard': False,
+    'w': 0.1}
+
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+Mixer Size: 
+277.635K
+[INFO 16:46:50] my_main Beginning training for 10050000 timesteps
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[1 1]
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+/home/elem/repos/MARL/pymarl/src/components/episode_buffer.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 16:46:50] my_main t_env: 240 / 10050000
+[INFO 16:46:50] my_main Estimated time left: 10 minutes, 14 seconds. Time passed: 0 seconds
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[1 1]
+[1 1]
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+------------------------------
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[1 1]
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+[1 1]
+------------------------------
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+------------------------------
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([0, 0]), 'done': False}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+[1 1]
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+------------------------------
+------------------------------
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+[1 1]
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+[1 1]
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+------------------------------
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+[1 1]
+------------------------------
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+------------------------------
+[INFO 16:46:51] my_main Recent Stats | t_env:       2160 | Episode:       72
+ep_length_mean:           30.0000	epsilon:                   1.0000	return_mean:             -607.1250	return_std:              273.9423
+test_ep_length_mean:      30.0000	test_return_mean:        -1360.0000	test_return_std:           0.0000	
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+------------------------------
+{'heavy_box_0': {'location': array([1, 0]), 'done': False}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[INFO 16:46:51] my_main t_env: 2400 / 10050000
+[INFO 16:46:51] my_main Estimated time left: 1 hours, 39 minutes, 43 seconds. Time passed: 1 seconds
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+[1 1]
+------------------------------
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+[1 1]
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([1, 0]), 'done': False}}
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([1, 0]), 'done': False}}
+[1 1]
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+------------------------------
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([1, 0]), 'done': False}}
+[1 1]
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+------------------------------
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+[1 1]
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+------------------------------
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([1, 0]), 'done': False}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([1, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[1 1]
+[1 1]
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+------------------------------
+------------------------------
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+[1 1]
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([1, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+[1 1]
+------------------------------
+[1 1]
+------------------------------
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([1, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+[1 1]
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+------------------------------
+[1 1]
+[1 1]
+------------------------------
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+{'agent_0': array([1, 0]), 'agent_1': array([0, 0])}
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+{'light_box_0': {'location': array([1, 1]), 'done': True}}
+[1 1]
+------------------------------
+{'heavy_box_0': {'location': array([0, 0]), 'done': False}}
+[1 1]
+------------------------------

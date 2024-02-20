@@ -1,0 +1,41 @@
+# --- CENTRALV specific parameters ---
+# Independent PPO with value norm, layer_norm, orthogonal, value clip
+# Adjusted for a single-agent scenario with 529 possible actions
+action_selector: "multinomial"  # Suitable for discrete action spaces
+epsilon_start: 1.0
+epsilon_finish: 0.05
+epsilon_anneal_time: 100000
+mask_before_softmax: True  # Useful for handling large action spaces by potentially masking invalid actions
+
+runner: "parallel"
+
+buffer_size: 200
+batch_size_run: 8
+batch_size: 64
+accumulated_episodes: 8  # For a single-agent scenario, this might be adjusted based on the specifics of your environment
+
+mac: 'basic_mac'
+agent: 'n_rnn'  # Ensure your network can handle the large action space effectively
+t_max: 10050000
+
+obs_agent_id: True  # For a single agent, this might be less relevant
+
+lr: 0.0005
+critic_coef: 0.5
+entropy: 0.01  # May want to adjust for balancing exploration in a large action space
+gae_lambda: 0.95
+mini_epochs: 8
+eps_clip: 0.2
+save_probs: True
+
+agent_output_type: "pi_logits"  # Ensure this supports your large action space effectively
+learner: "ppo_learner"
+
+use_layer_norm: True
+use_orthogonal: True
+gain: 0.01
+use_value_norm: True  # These normalization and initialization settings can help with stability
+
+name: "ippo_env_single_agent_large_action_space"
+
+use_cuda: False  # Consider enabling CUDA for performance if running on a compatible GPU

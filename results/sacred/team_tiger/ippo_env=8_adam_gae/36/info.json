@@ -1,0 +1,86 @@
+{
+  "actor_loss": [
+    0.8337610960006714
+  ],
+  "actor_loss_T": [
+    79
+  ],
+  "advantage_mean": [
+    -0.49469061742855025
+  ],
+  "advantage_mean_T": [
+    79
+  ],
+  "critic_loss": [
+    1.8022420406341553
+  ],
+  "critic_loss_T": [
+    79
+  ],
+  "entropy_loss": [
+    0.6426156163215637
+  ],
+  "entropy_loss_T": [
+    79
+  ],
+  "ep_length_mean": [
+    1.0
+  ],
+  "ep_length_mean_T": [
+    8
+  ],
+  "epsilon": [
+    1.0
+  ],
+  "epsilon_T": [
+    8
+  ],
+  "grad_norm": [
+    3.753643590413409
+  ],
+  "grad_norm_T": [
+    79
+  ],
+  "lr": [
+    0.05
+  ],
+  "lr_T": [
+    79
+  ],
+  "return_mean": [
+    -25.75
+  ],
+  "return_mean_T": [
+    8
+  ],
+  "return_std": [
+    38.440701086218496
+  ],
+  "return_std_T": [
+    8
+  ],
+  "target_mean": [
+    -0.495978633059731
+  ],
+  "target_mean_T": [
+    79
+  ],
+  "test_ep_length_mean": [
+    6.0
+  ],
+  "test_ep_length_mean_T": [
+    8
+  ],
+  "test_return_mean": [
+    -12.0
+  ],
+  "test_return_mean_T": [
+    8
+  ],
+  "test_return_std": [
+    0.0
+  ],
+  "test_return_std_T": [
+    8
+  ]
+}

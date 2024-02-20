@@ -1,0 +1,50 @@
+{
+  "ep_length_mean": [
+    100.0
+  ],
+  "ep_length_mean_T": [
+    800
+  ],
+  "episode": [
+    24
+  ],
+  "episode_T": [
+    2400
+  ],
+  "epsilon": [
+    1.0
+  ],
+  "epsilon_T": [
+    800
+  ],
+  "return_mean": [
+    -2830.75
+  ],
+  "return_mean_T": [
+    800
+  ],
+  "return_std": [
+    292.6481462439152
+  ],
+  "return_std_T": [
+    800
+  ],
+  "test_ep_length_mean": [
+    100.0
+  ],
+  "test_ep_length_mean_T": [
+    800
+  ],
+  "test_return_mean": [
+    -5005.416666666667
+  ],
+  "test_return_mean_T": [
+    800
+  ],
+  "test_return_std": [
+    623.4713249665581
+  ],
+  "test_return_std_T": [
+    800
+  ]
+}

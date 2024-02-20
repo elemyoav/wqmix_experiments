@@ -1,0 +1,83 @@
+[INFO 15:03:40] pymarl Running command 'my_main'
+[INFO 15:03:40] pymarl Started run with ID "1"
+[DEBUG 15:03:40] my_main Started
+[INFO 15:03:40] my_main Experiment Parameters:
+[INFO 15:03:40] my_main 
+
+{   'action_selector': 'gumbel',
+    'agent': 'rnn',
+    'agent_output_type': 'pi_logits',
+    'batch_size': 32,
+    'batch_size_run': 8,
+    'buffer_cpu_only': True,
+    'buffer_size': 128,
+    'checkpoint_path': '',
+    'critic': 'lica',
+    'critic_lr': 0.0005,
+    'critics_update_num': 1,
+    'entropy_coef': 0.06,
+    'env': 'team_rock_sampling',
+    'env_args': {   'env_args': {   'horizon': 300},
+                    'map_name': 'team_rock_sampling',
+                    'seed': 914362144},
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.0,
+    'epsilon_start': 0.0,
+    'evaluate': False,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'hypernet_embed_dim': 64,
+    'hypernet_layers': 2,
+    'label': 'default_label',
+    'learner': 'lica_learner',
+    'learner_log_interval': 2000,
+    'lica_mixing_embed_dim': 64,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.0025,
+    'mac': 'lica_mac',
+    'mask_before_softmax': True,
+    'name': 'lica_env=8_adam_td_lambda',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'run': 'default',
+    'runner': 'parallel',
+    'runner_log_interval': 2000,
+    'save_model': False,
+    'save_model_interval': 2000000,
+    'save_replay': False,
+    'seed': 914362144,
+    't_max': 10050000,
+    'target_update_interval': 200,
+    'td_lambda': 0.6,
+    'test_greedy': True,
+    'test_interval': 2000,
+    'test_nepisode': 40,
+    'use_cuda': True,
+    'use_tensorboard': False}
+
+Mixer Size: 
+2213.057K
+[INFO 15:03:43] my_main Beginning training for 10050000 timesteps
+/home/elem/repos/MARL/pymarl/src/components/episode_buffer.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 15:03:44] my_main t_env: 2400 / 10050000
+[INFO 15:03:44] my_main Estimated time left: 46 minutes, 39 seconds. Time passed: 1 seconds
+[INFO 15:03:48] my_main Recent Stats | t_env:       2400 | Episode:        8
+ep_length_mean:          300.0000	epsilon:                   0.0000	return_mean:             -702.7500	return_std:              651.8926
+test_ep_length_mean:     300.0000	test_return_mean:        -903.7750	test_return_std:         842.4087	
+[INFO 15:03:49] my_main t_env: 4800 / 10050000
+[INFO 15:03:49] my_main Estimated time left: 6 hours, 27 minutes, 7 seconds. Time passed: 6 seconds
+[INFO 15:03:54] my_main Recent Stats | t_env:       4800 | Episode:       16
+ep_length_mean:          300.0000	epsilon:                   0.0000	return_mean:             -754.1250	return_std:              636.1429
+test_ep_length_mean:     300.0000	test_return_mean:        -893.4500	test_return_std:         748.9991	
+[INFO 15:03:55] my_main t_env: 7200 / 10050000
+[INFO 15:03:55] my_main Estimated time left: 6 hours, 30 minutes, 26 seconds. Time passed: 12 seconds
+[INFO 15:04:00] my_main Recent Stats | t_env:       7200 | Episode:       24
+ep_length_mean:          300.0000	epsilon:                   0.0000	return_mean:             -535.1250	return_std:              546.8424
+test_ep_length_mean:     300.0000	test_return_mean:        -942.3500	test_return_std:         769.8265	

@@ -1,0 +1,101 @@
+[INFO 14:00:31] pymarl Running command 'my_main'
+[INFO 14:00:31] pymarl Started run with ID "7"
+[DEBUG 14:00:31] my_main Started
+[INFO 14:00:31] my_main Experiment Parameters:
+[INFO 14:00:31] my_main 
+
+{   'accumulated_episodes': 8,
+    'action_selector': 'multinomial',
+    'agent': 'n_rnn',
+    'agent_output_type': 'pi_logits',
+    'batch_size': 64,
+    'batch_size_run': 8,
+    'buffer_cpu_only': True,
+    'buffer_size': 64,
+    'checkpoint_path': '',
+    'critic_coef': 0.5,
+    'critic_lr': 0.0005,
+    'entropy': 0.01,
+    'env': 'team_rock_sampling',
+    'env_args': {   'env_args': {   'horizon': 300},
+                    'map_name': 'team_rock_sampling',
+                    'seed': 835876114},
+    'eps_clip': 0.2,
+    'epsilon_anneal_time': 100000,
+    'epsilon_finish': 0.0,
+    'epsilon_start': 1.0,
+    'evaluate': False,
+    'gae_lambda': 0.95,
+    'gain': 0.01,
+    'gamma': 0.99,
+    'grad_norm_clip': 10,
+    'label': 'default_label',
+    'learner': 'ppo_learner',
+    'learner_log_interval': 2000,
+    'load_step': 0,
+    'local_results_path': 'results',
+    'log_interval': 2000,
+    'lr': 0.0005,
+    'mac': 'basic_mac',
+    'mask_before_softmax': True,
+    'mini_epochs': 8,
+    'name': 'ippo_env=8_adam_gae',
+    'obs_agent_id': True,
+    'obs_last_action': True,
+    'optim_alpha': 0.99,
+    'optim_eps': 1e-05,
+    'repeat_id': 1,
+    'rnn_hidden_dim': 64,
+    'run': 'default',
+    'runner': 'parallel',
+    'runner_log_interval': 2000,
+    'save_model': False,
+    'save_model_interval': 2000000,
+    'save_probs': True,
+    'save_replay': False,
+    'seed': 835876114,
+    't_max': 10050000,
+    'test_greedy': True,
+    'test_interval': 2000,
+    'test_nepisode': 40,
+    'use_cuda': False,
+    'use_layer_norm': False,
+    'use_orthogonal': False,
+    'use_tensorboard': False,
+    'use_value_norm': False}
+
+[INFO 14:00:31] my_main Beginning training for 10050000 timesteps
+/home/elem/repos/MARL/pymarl/src/components/episode_buffer.py:115: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.clone().detach() or sourceTensor.clone().detach().requires_grad_(True), rather than torch.tensor(sourceTensor).
+  v = th.tensor(v, dtype=dtype, device=self.device)
+[INFO 14:00:32] my_main t_env: 2400 / 10050000
+[INFO 14:00:32] my_main Estimated time left: 31 minutes, 58 seconds. Time passed: 0 seconds
+[INFO 14:00:36] my_main Recent Stats | t_env:       2400 | Episode:        8
+ep_length_mean:          300.0000	epsilon:                   1.0000	return_mean:             -896.8750	return_std:              761.1418
+test_ep_length_mean:     300.0000	test_return_mean:        -1462.1500	test_return_std:         1244.1686	
+[INFO 14:00:37] my_main t_env: 4800 / 10050000
+[INFO 14:00:37] my_main Estimated time left: 6 hours, 2 minutes, 47 seconds. Time passed: 6 seconds
+[INFO 14:00:41] my_main Recent Stats | t_env:       4800 | Episode:       16
+ep_length_mean:          300.0000	epsilon:                   0.9760	return_mean:             -916.7500	return_std:              668.9675
+test_ep_length_mean:     300.0000	test_return_mean:        -1735.1000	test_return_std:         1264.6262	
+[INFO 14:00:42] my_main t_env: 7200 / 10050000
+[INFO 14:00:42] my_main Estimated time left: 5 hours, 52 minutes, 33 seconds. Time passed: 11 seconds
+[INFO 14:00:46] my_main Recent Stats | t_env:       7200 | Episode:       24
+ep_length_mean:          300.0000	epsilon:                   0.9520	return_mean:             -1283.8750	return_std:               53.2011
+test_ep_length_mean:     300.0000	test_return_mean:        -1600.9500	test_return_std:         1238.5273	
+[INFO 14:00:47] my_main t_env: 9600 / 10050000
+[INFO 14:00:47] my_main Estimated time left: 5 hours, 56 minutes, 35 seconds. Time passed: 16 seconds
+[INFO 14:00:51] my_main Recent Stats | t_env:       9600 | Episode:       32
+ep_length_mean:          300.0000	epsilon:                   0.9280	return_mean:             -886.2500	return_std:              747.5016
+test_ep_length_mean:     300.0000	test_return_mean:        -1554.1500	test_return_std:         1333.1914	
+[INFO 14:00:52] my_main t_env: 12000 / 10050000
+[INFO 14:00:52] my_main Estimated time left: 6 hours, 19 minutes, 57 seconds. Time passed: 21 seconds
+[INFO 14:00:58] my_main Recent Stats | t_env:      12000 | Episode:       40
+ep_length_mean:          300.0000	epsilon:                   0.9040	return_mean:             -426.5000	return_std:              886.9398
+test_ep_length_mean:     300.0000	test_return_mean:        -1304.7500	test_return_std:         1381.1597	
+[INFO 14:00:59] my_main t_env: 14400 / 10050000
+[INFO 14:00:59] my_main Estimated time left: 7 hours, 36 minutes, 48 seconds. Time passed: 28 seconds
+[INFO 14:01:05] my_main Recent Stats | t_env:      14400 | Episode:       48
+ep_length_mean:          300.0000	epsilon:                   0.8800	return_mean:             -900.8750	return_std:              735.6658
+test_ep_length_mean:     300.0000	test_return_mean:        -1500.0500	test_return_std:         1312.9772	
+[INFO 14:01:06] my_main t_env: 16800 / 10050000
+[INFO 14:01:06] my_main Estimated time left: 7 hours, 39 minutes, 51 seconds. Time passed: 34 seconds
